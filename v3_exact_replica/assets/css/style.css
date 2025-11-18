@@ -1,0 +1,468 @@
+/* ===================================
+   CSS Custom Properties
+   =================================== */
+:root {
+    --color-red: #ff0000;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-red-dark: #8b0000;
+    
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    
+    --transition-smooth: cubic-bezier(0.59, 0.28, 0.25, 0.99);
+    --transition-duration: 1s;
+}
+
+/* ===================================
+   Reset & Base Styles
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    background-color: var(--color-black);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-white);
+    background-color: var(--color-black);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+}
+
+/* ===================================
+   Custom Scrollbar
+   =================================== */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+    background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-red);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-black);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--color-black);
+}
+
+/* ===================================
+   Preloader
+   =================================== */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 500ms var(--transition-smooth);
+}
+
+.preloader.is-loaded {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.preloader__content {
+    text-align: center;
+}
+
+.preloader__text {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 200;
+    letter-spacing: 0.05em;
+    color: var(--color-white);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.preloader__fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 0;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* ===================================
+   Main Content
+   =================================== */
+.content {
+    opacity: 0;
+    min-height: 100vh;
+    transition: opacity var(--transition-duration) var(--transition-smooth);
+}
+
+.content.is-active {
+    opacity: 1;
+}
+
+/* ===================================
+   Cover Section
+   =================================== */
+.cover {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, var(--color-black) 0%, var(--color-red-dark) 100%);
+    overflow: hidden;
+}
+
+.cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 10px,
+            rgba(255, 0, 0, 0.03) 10px,
+            rgba(255, 0, 0, 0.03) 20px
+        );
+    pointer-events: none;
+}
+
+.cover__images {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cover__img {
+    transition: transform var(--transition-duration) var(--transition-smooth);
+}
+
+.cover__img--1 {
+    transform: translateX(-100%);
+    animation: slideInLeft 1.3s var(--transition-smooth) 0.5s forwards;
+}
+
+.cover__img--2 {
+    transform: translateX(100%);
+    animation: slideInRight 1.3s var(--transition-smooth) 0.5s forwards;
+}
+
+.cover__text {
+    font-size: clamp(4rem, 12vw, 10rem);
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--color-white);
+    text-shadow: 0 0 30px var(--color-red);
+}
+
+.cover__title {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.title-animation {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 200;
+    letter-spacing: 0.2em;
+    opacity: 0;
+    animation: fadeInUp 1s var(--transition-smooth) 1.5s forwards;
+}
+
+.title-letter {
+    display: inline-block;
+    animation: letterFloat 3s ease-in-out infinite;
+}
+
+.title-letter:nth-child(1) { animation-delay: 0s; }
+.title-letter:nth-child(2) { animation-delay: 0.1s; }
+.title-letter:nth-child(3) { animation-delay: 0.2s; }
+.title-letter:nth-child(5) { animation-delay: 0.3s; }
+.title-letter:nth-child(6) { animation-delay: 0.4s; }
+.title-letter:nth-child(7) { animation-delay: 0.5s; }
+.title-letter:nth-child(9) { animation-delay: 0.6s; }
+.title-letter:nth-child(10) { animation-delay: 0.7s; }
+.title-letter:nth-child(11) { animation-delay: 0.8s; }
+.title-letter:nth-child(12) { animation-delay: 0.9s; }
+
+.title-space {
+    display: inline-block;
+    width: 0.5em;
+}
+
+@keyframes slideInLeft {
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes letterFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ===================================
+   Section Styles
+   =================================== */
+.section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-color: var(--color-black);
+}
+
+.section__content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section__title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--color-white);
+    text-transform: lowercase;
+}
+
+.section__text {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.section__text p {
+    margin-bottom: 1.5rem;
+}
+
+/* ===================================
+   Fade In Animation
+   =================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s var(--transition-smooth), 
+                transform 0.8s var(--transition-smooth);
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===================================
+   Twin Peaks Section (Zigzag Floor)
+   =================================== */
+.twin-peaks {
+    background: linear-gradient(to bottom, var(--color-black) 0%, var(--color-red-dark) 100%);
+}
+
+.zigzag-floor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: 
+        linear-gradient(135deg, var(--color-black) 25%, transparent 25%),
+        linear-gradient(225deg, var(--color-black) 25%, transparent 25%),
+        linear-gradient(45deg, var(--color-white) 25%, transparent 25%),
+        linear-gradient(315deg, var(--color-white) 25%, var(--color-red) 25%);
+    background-size: 50px 50px;
+    background-position: 0 0, 0 25px, 25px -25px, 25px 0px;
+    opacity: 0.3;
+}
+
+/* ===================================
+   Specific Section Styles
+   =================================== */
+.art-life {
+    background: radial-gradient(circle at center, var(--color-red-dark) 0%, var(--color-black) 70%);
+}
+
+.eraserhead {
+    background: var(--color-black);
+}
+
+.eraserhead .section__title {
+    color: var(--color-red);
+}
+
+.elephant-man {
+    background: linear-gradient(to bottom, var(--color-black) 0%, #1a1a1a 100%);
+}
+
+.blue-velvet {
+    background: linear-gradient(135deg, var(--color-black) 0%, #000033 100%);
+}
+
+.mulholland-drive {
+    background: radial-gradient(ellipse at top, #1a0000 0%, var(--color-black) 100%);
+}
+
+/* ===================================
+   Quotes Section
+   =================================== */
+.quotes {
+    background: var(--color-black);
+    padding: 6rem 2rem;
+}
+
+.quote {
+    margin-bottom: 4rem;
+    text-align: center;
+    padding: 2rem;
+    border-left: 3px solid var(--color-red);
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.quote__text {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+}
+
+.quote__author {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 500;
+    color: var(--color-red);
+}
+
+/* ===================================
+   Footer
+   =================================== */
+.footer {
+    background-color: var(--color-black);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--color-red);
+}
+
+.footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__links a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.footer__links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-red);
+    transition: width 0.3s ease;
+}
+
+.footer__links a:hover {
+    color: var(--color-red);
+}
+
+.footer__links a:hover::after {
+    width: 100%;
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 768px) {
+    .cover__images {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .section__title {
+        margin-bottom: 1.5rem;
+    }
+    
+    .quote {
+        padding: 1.5rem;
+    }
+    
+    .footer__links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .cover__text {
+        font-size: 3rem;
+    }
+}
