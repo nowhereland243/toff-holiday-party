@@ -48,7 +48,7 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
-    color: #888;
+    color: #8b0000;
     margin-bottom: 0.5rem;
 }
 
@@ -197,14 +197,14 @@ p {
 }
 
 .secondary-btn {
-    border-color: #333;
-    color: #888;
+    border-color: #660000;
+    color: #cc0000;
 }
 
 .secondary-btn:hover {
-    background: #333;
+    background: #cc0000;
     color: #fff;
-    border-color: #333;
+    border-color: #cc0000;
 }
 
 /* Footer */
@@ -223,13 +223,13 @@ footer {
 }
 
 .social-links a {
-    color: #666;
+    color: #8b0000;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: #fff;
+    color: #ff0000;
 }
 
 /* Animations */
