@@ -481,20 +481,20 @@ footer {
 .desktop-invitation {
     width: 100%;
     height: auto;
-    display: block;
+    display: block !important;
 }
 
 .mobile-invitation {
     width: 100%;
     height: auto;
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 768px) {
     .desktop-invitation {
-        display: none;
+        display: none !important;
     }
     .mobile-invitation {
-        display: block;
+        display: block !important;
     }
 }
