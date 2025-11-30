@@ -98,6 +98,51 @@ TOFF 2025 Holiday/
 └── .gitignore           # Git ignore rules
 ```
 
+## Promo Code Support
+
+The site supports passing promo codes through URL parameters. When users visit the site with a promo code in the URL, it will automatically be applied to all Givebutter links (tickets and donations).
+
+### How to Use
+
+1. **In Email Campaigns:**
+   Add the promo code as a URL parameter when linking to your site:
+   ```
+   https://your-vercel-url.vercel.app?code=YOURCODE
+   ```
+   or
+   ```
+   https://your-vercel-url.vercel.app?promo=YOURCODE
+   ```
+
+2. **Example:**
+   If your promo code is `EARLYBIRD25`, your email link would be:
+   ```
+   https://your-vercel-url.vercel.app?code=EARLYBIRD25
+   ```
+
+3. **How It Works:**
+   - When a user clicks the link, the site detects the promo code from the URL
+   - The code is automatically appended to all Givebutter links on the page
+   - When users click "GET TICKETS" or "DONATE NOW", they'll be taken to Givebutter with the promo code pre-filled
+
+### Supported URL Parameters
+
+The site accepts any of these parameter names:
+- `?code=YOURCODE`
+- `?promo=YOURCODE`
+- `?promocode=YOURCODE`
+
+All three will work the same way.
+
+### Testing
+
+To test your promo code links:
+1. Visit your site with a promo code: `https://your-site.com?code=TEST123`
+2. Click on "GET TICKETS" or "DONATE NOW"
+3. Check the Givebutter URL - it should include `?code=TEST123` (or similar parameter)
+
+**Note:** You may need to verify the exact parameter name Givebutter uses for promo codes. Common options are `code`, `promo`, `coupon`, or `discount`. If `code` doesn't work, you can modify the JavaScript in `v1/script.js` to use a different parameter name.
+
 ## Notes
 
 - The site is configured to serve from the `v1` directory

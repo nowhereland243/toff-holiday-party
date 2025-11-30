@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Handle promo code from URL parameters
+    // Supports: ?code=ABC123 or ?promo=ABC123 or ?promocode=ABC123
+    const urlParams = new URLSearchParams(window.location.search);
+    const promoCode = urlParams.get('code') || urlParams.get('promo') || urlParams.get('promocode');
+    
+    if (promoCode) {
+        // Update all Givebutter links to include the promo code
+        const givebutterLinks = document.querySelectorAll('a[href*="givebutter.com"]');
+        givebutterLinks.forEach(link => {
+            const url = new URL(link.href);
+            // Givebutter parameter name - adjust if needed
+            // Common options: 'code', 'promo', 'coupon', 'discount'
+            // If 'code' doesn't work, change this to the correct parameter name
+            const givebutterParam = 'code';
+            url.searchParams.set(givebutterParam, promoCode);
+            link.href = url.toString();
+        });
+    }
+
     // Intersection Observer for scroll animations
     const observerOptions = {
         root: null,
