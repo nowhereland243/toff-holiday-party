@@ -442,3 +442,59 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--hover-red);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+    mix-blend-mode: difference;
+    display: none; /* Hidden by default, shown via JS on non-touch devices */
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .custom-cursor {
+        display: block;
+    }
+    
+    .hover-target {
+        cursor: none; /* Hide default cursor on targets */
+    }
+}
+
+.custom-cursor.active {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(119, 28, 7, 0.2);
+    border-color: var(--hover-red);
+}
+
+/* Invitation Images */
+.desktop-invitation {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mobile-invitation {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop-invitation {
+        display: none;
+    }
+    .mobile-invitation {
+        display: block;
+    }
+}

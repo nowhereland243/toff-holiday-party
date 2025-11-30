@@ -49,4 +49,24 @@ document.addEventListener('DOMContentLoaded', () => {
         
         lastScroll = currentScroll;
     });
+
+    // Custom Cursor Logic
+    const cursor = document.querySelector('.custom-cursor');
+    const hoverTargets = document.querySelectorAll('.hover-target');
+
+    if (cursor) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        hoverTargets.forEach(target => {
+            target.addEventListener('mouseenter', () => {
+                cursor.classList.add('active');
+            });
+            target.addEventListener('mouseleave', () => {
+                cursor.classList.remove('active');
+            });
+        });
+    }
 });
