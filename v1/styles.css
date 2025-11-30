@@ -294,6 +294,39 @@ p {
     box-shadow: 0 0 30px rgba(119, 28, 7, 0.6), 0 0 60px rgba(119, 28, 7, 0.3);
 }
 
+/* Hosted By */
+.hosted-by {
+    text-transform: uppercase;
+    font-family: var(--font-body);
+}
+
+.apparatus-link {
+    color: var(--hover-red);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.apparatus-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--hover-red);
+    transition: width 0.3s ease;
+}
+
+.apparatus-link:hover {
+    color: var(--hover-red);
+    text-shadow: 0 0 10px var(--hover-red);
+}
+
+.apparatus-link:hover::after {
+    width: 100%;
+}
+
 /* Footer */
 footer {
     padding: 4rem 2rem;
