@@ -65,6 +65,23 @@ h3:hover {
     color: var(--hover-red);
 }
 
+.hosted-by {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #888;
+    margin-top: 2rem;
+    font-weight: 400;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+}
+
+.hosted-by:hover {
+    color: var(--hover-red);
+    opacity: 1;
+}
+
 p {
     font-size: 1.1rem;
     max-width: 600px;
