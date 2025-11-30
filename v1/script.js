@@ -14,11 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     givebutterLinks.forEach((link) => {
       const url = new URL(link.href);
-      // Givebutter parameter name - adjust if needed
-      // Common options: 'code', 'promo', 'coupon', 'discount'
-      // If 'code' doesn't work, change this to the correct parameter name
-      const givebutterParam = "code";
-      url.searchParams.set(givebutterParam, promoCode);
+      // Givebutter uses 'promo' as the parameter name for promo codes
+      // Reference: https://help.givebutter.com/en/articles/2799365-how-to-use-promo-codes
+      url.searchParams.set("promo", promoCode);
       link.href = url.toString();
     });
   }
