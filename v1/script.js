@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
@@ -16,8 +16,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const scrollElements = document.querySelectorAll('.fade-in-scroll');
-    scrollElements.forEach(el => observer.observe(el));
+    const fadeElements = document.querySelectorAll('.fade-in-scroll');
+    fadeElements.forEach(element => {
+        observer.observe(element);
+    });
+
+    // Parallax Effect
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        const parallaxImages = document.querySelectorAll('.full-width-image img');
+        
+        parallaxImages.forEach(img => {
+            const parent = img.parentElement;
+            const parentTop = parent.offsetTop;
+            const parentHeight = parent.offsetHeight;
+            const windowHeight = window.innerHeight;
+            
+            // Only animate if in view
+            if (scrolled + windowHeight > parentTop && scrolled < parentTop + parentHeight) {
+                const speed = 0.2;
+                const yPos = (scrolled - parentTop) * speed;
+                img.style.transform = `translateY(${yPos}px)`;
+            }
+        });
+    });
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
