@@ -43,6 +43,38 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(element);
   });
 
+  // Reveal Text Animation
+  const revealTextElements = document.querySelectorAll(".reveal-text");
+  
+  revealTextElements.forEach((element) => {
+    const text = element.getAttribute("data-text");
+    element.innerHTML = ""; // Clear existing content
+    
+    // Split text into letters and wrap each in a span
+    text.split("").forEach((char) => {
+      const span = document.createElement("span");
+      span.classList.add("letter");
+      span.textContent = char === " " ? "\u00A0" : char; // Use non-breaking space for spaces
+      element.appendChild(span);
+    });
+  });
+
+  // Observer for reveal text animation
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        // Optionally stop observing after animation
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe reveal text elements
+  revealTextElements.forEach((element) => {
+    revealObserver.observe(element);
+  });
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
