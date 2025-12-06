@@ -181,24 +181,43 @@ html:not(.dark) .invert-on-light {
                 }
                 
                 /* Donate Button Styles - All Screens */
-                a.donate-btn-mobile {
+                .donate-btn {
                     background-color: #771c07 !important;
                     color: white !important;
                 }
                 
-                /* Mobile Donate Button Positioning */
+                /* Mobile-only donate button */
+                .donate-btn-mobile-only {
+                    display: block !important;
+                    position: absolute !important;
+                    left: 50% !important;
+                    top: 50% !important;
+                    transform: translate(-50%, -50%) !important;
+                    z-index: 1000 !important;
+                    background-color: #771c07 !important;
+                    color: white !important;
+                }
+                
+                /* Hide desktop button on mobile, show mobile button */
                 @media (max-width: 767px) {
-                    a.donate-btn-mobile {
-                        position: absolute !important;
-                        left: 50% !important;
-                        transform: translateX(-50%) !important;
-                        z-index: 1000 !important;
-                        display: inline-block !important;
-                        visibility: visible !important;
-                        opacity: 1 !important;
+                    .donate-btn-desktop {
+                        display: none !important;
+                    }
+                }
+                
+                /* Hide mobile button on desktop, show desktop button */
+                @media (min-width: 768px) {
+                    .donate-btn-mobile-only {
+                        display: none !important;
                     }
                 }
 			</style>
+			
+			<!-- Mobile-only Donate Button -->
+			<a class="button donate-btn-mobile-only t-font-smooth t-base t-500 b-0 rounded-15 t-nowrap t-no-underline" href="https://givebutter.com/41st" target="_blank" rel="noopener noreferrer" style="padding: 10px 24px; margin-top: 15px;">
+				Donate
+			</a>
+			
 			<nav class="navigation | d-flex items-center overflow-hidden relative js-header:navigationContainer" aria-label="Main navigation">
 				<div class="nav-responsive items-center | js-header:navigation">
 					<!-- Left Group -->
@@ -229,8 +248,8 @@ html:not(.dark) .invert-on-light {
 						</li>
 					</ul>
 
-					<!-- Center Button -->
-					<a class="button donate-btn-mobile t-font-smooth t-base t-500 d-inline-block t-black dark:t-black t-off-white bg-off-white color-animation b-0 rounded-15 t-nowrap t-no-underline" href="https://givebutter.com/41st" target="_blank" rel="noopener noreferrer" style="padding: 10px 24px; background-color: #771c07 !important; color: white !important;">
+					<!-- Center Button - Desktop Only -->
+					<a class="button donate-btn donate-btn-desktop t-font-smooth t-base t-500 d-inline-block b-0 rounded-15 t-nowrap t-no-underline" href="https://givebutter.com/41st" target="_blank" rel="noopener noreferrer" style="padding: 10px 24px;">
 						Donate
 					</a>
 
@@ -723,13 +742,7 @@ html:not(.dark) .invert-on-light {
 		<div class="">
 			<div class="relative | js-cta-footer:submitContainer">
                 <button type="button" class="waitlist-form__submit button link t-font-smooth bg-black dark:bg-off-white bg-animation t-500 t-base d-inline-block dark:t-black t-off-white color-animation b-0 rounded-15 t-nowrap t-no-underline | js-cta-footer:submit"
-onclick="
-    if (window.innerWidth >= 1024) {
-        window.location.href = 'https://www.cosmos.so/onboarding';
-    } else {
-        window.location.href = 'https://apps.apple.com/us/app/cosmos-curate-your-universe/id1577975475';
-    }
-    return false;"
+onclick="window.location.href = 'https://givebutter.com/41st'; return false;"
                 >
 					<div class="t-lh-1 relative d-flex overflow-hidden js-cta-footer:submitText">
                           <div class="link__text | d-block t-lh-1 pb-1">
