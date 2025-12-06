@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "buildCommand": null,
+  "outputDirectory": ".",
   "rewrites": [
     {
       "source": "/toff2025-holiday-donation",
@@ -44,6 +46,10 @@
     {
       "source": "/Auto-Captions-V6.mp4",
       "destination": "/v7_cosmos/Auto-Captions-V6.mp4"
+    },
+    {
+      "source": "/Favorit-:file*",
+      "destination": "/v7_cosmos/Favorit-:file*"
     },
     {
       "source": "/",
