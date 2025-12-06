@@ -161,8 +161,22 @@ html:not(.dark) .invert-on-light {
 				</a>
 			</div>
 
+			<style>
+				.nav-responsive {
+					display: flex;
+					justify-content: center;
+					width: 100%;
+					gap: 30px;
+				}
+				@media (min-width: 768px) {
+					.nav-responsive {
+						display: grid;
+						grid-template-columns: 1fr auto 1fr;
+					}
+				}
+			</style>
 			<nav class="navigation | d-flex items-center overflow-hidden relative js-header:navigationContainer" aria-label="Main navigation">
-				<div class="d-grid items-center | js-header:navigation" style="display: grid; grid-template-columns: 1fr auto 1fr; width: 100%; gap: 30px;">
+				<div class="nav-responsive items-center | js-header:navigation">
 					<!-- Left Group -->
 					<ul class="list-unstyled d-none d-flex@sm items-center mb-0" style="justify-self: end; gap: 40px;">
 						<li class="t-lh-1 d-flex" role="none">
