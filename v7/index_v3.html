@@ -103,16 +103,20 @@ html:not(.dark) .invert-on-light {
     filter: invert(1);
 }
 
-/* Mobile Section Spacing - More breathing room for flower animation */
+
+</style>
+<link crossorigin="anonymous" rel='stylesheet' id='module/resources/assets/scss/style.scss-css' href='styles/style.css' media='all' />
+
+<style>
+/* Mobile Section Spacing - Moved here to override style.css */
 @media (max-width: 767px) {
-    .js-manifesto\:blocksContainer .container-fluid.mb-10vh,
-    .js-manifesto\:blocksContainer .container-fluid {
+    html body .js-manifesto\:blocksContainer .container-fluid.mb-10vh,
+    html body .js-manifesto\:blocksContainer .container-fluid {
         margin-bottom: 100vh !important;
         padding-bottom: 0 !important;
     }
 }
 </style>
-<link crossorigin="anonymous" rel='stylesheet' id='module/resources/assets/scss/style.scss-css' href='styles/style.css' media='all' />
 
         <script>
             // Define dataLayer and the gtag function.
