@@ -6,8 +6,36 @@
       "destination": "/v7_cosmos/index_v3.html"
     },
     {
-      "source": "/(.*)",
-      "destination": "/v7_cosmos/$1"
+      "source": "/assets/:path*",
+      "destination": "/v7_cosmos/assets/:path*"
+    },
+    {
+      "source": "/audio/:path*",
+      "destination": "/v7_cosmos/audio/:path*"
+    },
+    {
+      "source": "/images/:path*",
+      "destination": "/v7_cosmos/images/:path*"
+    },
+    {
+      "source": "/fonts/:path*",
+      "destination": "/v7_cosmos/fonts/:path*"
+    },
+    {
+      "source": "/scripts/:path*",
+      "destination": "/v7_cosmos/scripts/:path*"
+    },
+    {
+      "source": "/styles/:path*",
+      "destination": "/v7_cosmos/styles/:path*"
+    },
+    {
+      "source": "/manifest.json",
+      "destination": "/v7_cosmos/manifest.json"
+    },
+    {
+      "source": "/:file",
+      "destination": "/v7_cosmos/:file"
     }
   ],
   "cleanUrls": true,
