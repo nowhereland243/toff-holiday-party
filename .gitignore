@@ -35,3 +35,7 @@ dist/
 build/
 *.log
 
+
+
+
+.vercel

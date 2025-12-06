@@ -38,7 +38,9 @@ If you encounter authentication issues, you can either:
 2. Click "Add New Project"
 3. Import your GitHub repository: `nowhereland243/toff-holiday-party`
 4. Vercel will automatically detect the `vercel.json` configuration
-5. The project will deploy automatically from the `v1` directory
+4. Vercel will automatically detect the `vercel.json` configuration
+5. **IMPORTANT:** Ensure "Root Directory" is set to `./` (the default) in Project Settings. Do NOT select `v1`.
+6. Click "Deploy"
 6. Click "Deploy"
 
 ### Option 2: Deploy via Vercel CLI
@@ -106,16 +108,20 @@ The site supports passing promo codes through URL parameters. When users visit t
 
 1. **In Email Campaigns:**
    Add the promo code as a URL parameter when linking to your site:
+
    ```
    https://your-vercel-url.vercel.app?code=YOURCODE
    ```
+
    or
+
    ```
    https://your-vercel-url.vercel.app?promo=YOURCODE
    ```
 
 2. **Example:**
    If your promo code is `EARLYBIRD25`, your email link would be:
+
    ```
    https://your-vercel-url.vercel.app?code=EARLYBIRD25
    ```
@@ -128,6 +134,7 @@ The site supports passing promo codes through URL parameters. When users visit t
 ### Supported URL Parameters
 
 The site accepts any of these parameter names:
+
 - `?code=YOURCODE`
 - `?promo=YOURCODE`
 - `?promocode=YOURCODE`
@@ -137,6 +144,7 @@ All three will work the same way.
 ### Testing
 
 To test your promo code links:
+
 1. Visit your site with a promo code: `https://your-site.com?code=TEST123`
 2. Click on "GET TICKETS" or "DONATE NOW"
 3. Check the Givebutter URL - it should include `?code=TEST123` (or similar parameter)
@@ -145,7 +153,8 @@ To test your promo code links:
 
 ## Notes
 
-- The site is configured to serve from the `v1` directory
+- The site is configured to serve from the **ROOT** directory (`./`). Do NOT set the Root Directory to `v1`.
+- `vercel.json` handles all routing to `v7_cosmos` and other folders.
 - All images should be in `v1/images/`
 - The site uses static files, so no build process is needed
 - Vercel will automatically deploy on every push to the `main` branch (if connected via GitHub)

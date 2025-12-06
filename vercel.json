@@ -34,8 +34,8 @@
       "destination": "/v7_cosmos/manifest.json"
     },
     {
-      "source": "/vortex:file*",
-      "destination": "/v7_cosmos/vortex:file*"
+      "source": "/(vortex.*)",
+      "destination": "/v7_cosmos/$1"
     },
     {
       "source": "/background-noise.png",
@@ -46,15 +46,15 @@
       "destination": "/v7_cosmos/Auto-Captions-V6.mp4"
     },
     {
-      "source": "/Favorit-:file*",
-      "destination": "/v7_cosmos/Favorit-:file*"
+      "source": "/(Favorit-.*)",
+      "destination": "/v7_cosmos/$1"
     },
     {
       "source": "/",
       "destination": "/v7_cosmos/index_v3.html"
     }
   ],
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
   "headers": [
     {

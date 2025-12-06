@@ -48,6 +48,7 @@
 
 
 <style id='safe-svg-svg-icon-style-inline-css'>
+.js-manifesto\:readTimeContainer, .secondary-form { display: none !important; }
 .safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
 
 /* Research Toggle Styles */
@@ -154,10 +155,12 @@ html:not(.dark) .invert-on-light {
     <div class="fixed top left width w-1/1 h-10 z-10 | js-shy-header:trigger"></div>
 
     <a href="/" class="header__wordmark | d-none d-block@md | js-header-wordmark">
-        <img src="assets/toff-logo-white.png" alt="Tom of Finland Foundation" style="height: 16px !important; width: auto !important; max-width: none;">
+        <img src="assets/toff-logo-white.svg" alt="Tom of Finland Foundation" style="height: 50px !important; width: auto !important; max-width: none;">
     </a>
 
-    <header class="header__el | fixed center-x z-20 rounded-22 bg-tweet-bg-light@sm dark:bg-header@sm bg-animation | js-shy-header:el js-header:el">
+
+
+    <header class="header__el | fixed center-x z-20 rounded-22 | js-shy-header:el js-header:el">
 		<div class="header__inner | d-flex justify-end justify-center@sm items-center relative | js-header:inner">
 			<div class="header__logoContainer | d-none d-block@sm flex-no-shrink pointer-events-none pointer-events-auto@sm | js-header:logomarkContainer">
 				<a class="d-flex items-center t-lh-1 mr-20 | js-header:logomark" href="https://www.cosmos.so" aria-label="Back to homepage">
@@ -166,142 +169,81 @@ html:not(.dark) .invert-on-light {
 			</div>
 
 			<nav class="navigation | d-none d-flex@sm items-center overflow-hidden relative js-header:navigationContainer" aria-label="Main navigation">
-	<ul role="menubar" aria-label="Main navigation" class="d-flex items-center list-unstyled mb-0 | js-header:navigation">via 
-				<a href="/manifesto" class="link | t-d-warm-grey dark:t-grey2 t-font-smooth t-base t-400 t-no-underline d-inline-block  |  " role="menuitem">
-					<div class="t-lh-1 relative d-flex overflow-hidden">
-						<div class="link__text | d-block t-lh-1">
-							Manifesto
-						</div>
-						<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
-							Manifesto
-						</div>
-					</div>
-				</a>
-			</li>
-					<li class="t-lh-1 d-flex" role="none">
-				<a href="https://work.cosmos.so/" target="_blank" class="link | t-d-warm-grey dark:t-grey2 t-font-smooth t-base t-400 t-no-underline d-inline-block ml-20 |  " role="menuitem">
-					<div class="t-lh-1 relative d-flex overflow-hidden">
-						<div class="link__text | d-block t-lh-1">
-							Careers
-						</div>
-						<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
-							Careers
-						</div>
-					</div>
-				</a>
-			</li>
+				<div class="d-grid items-center | js-header:navigation" style="display: grid; grid-template-columns: 1fr auto 1fr; width: 100%; gap: 30px;">
+					<!-- Left Group -->
+					<ul class="list-unstyled d-flex items-center mb-0" style="justify-self: end; gap: 40px;">
+						<li class="t-lh-1 d-flex" role="none">
+							<a href="#who" class="link | t-d-warm-grey dark:t-grey2 t-font-smooth t-base t-400 t-no-underline d-inline-block" role="menuitem">
+								<div class="t-lh-1 relative d-flex overflow-hidden">
+									<div class="link__text | d-block t-lh-1">
+										Who
+									</div>
+									<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
+										Who
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="t-lh-1 d-flex" role="none">
+							<a href="#mission" class="link | t-d-warm-grey dark:t-grey2 t-font-smooth t-base t-400 t-no-underline d-inline-block" role="menuitem">
+								<div class="t-lh-1 relative d-flex overflow-hidden">
+									<div class="link__text | d-block t-lh-1">
+										Why
+									</div>
+									<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
+										Why
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
 
-		<li class="t-lh-1 d-flex" role="none">
-			<a href="https://cosmos.so/discover" class="link | t-d-warm-grey dark:t-grey2 t-font-smooth t-base t-400 t-no-underline d-inline-block ml-20" role="menuitem" rel="noopener noreferrer">
-				<div class="t-lh-1 relative d-flex overflow-hidden">
-					<div class="link__text | d-block t-lh-1">
-					    Discover
-					</div>
-					<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
-					    Discover
-					</div>
+					<!-- Center Button -->
+					<a class="button t-font-smooth t-base t-500 d-inline-block t-black dark:t-black t-off-white bg-off-white color-animation b-0 rounded-15 t-nowrap t-no-underline" href="https://givebutter.com/41st" target="_blank" rel="noopener noreferrer" style="padding: 10px 24px;">
+						Donate
+					</a>
+
+					<!-- Right Group -->
+					<ul class="list-unstyled d-flex items-center mb-0" style="justify-self: start; gap: 40px;">
+						<li class="t-lh-1 d-flex" role="none">
+							<a href="#programs" class="link | t-d-warm-grey dark:t-grey2 t-font-smooth t-base t-400 t-no-underline d-inline-block" role="menuitem">
+								<div class="t-lh-1 relative d-flex overflow-hidden">
+									<div class="link__text | d-block t-lh-1">
+										What
+									</div>
+									<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
+										What
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="t-lh-1 d-flex" role="none">
+							<a href="#financials" class="link | t-d-warm-grey dark:t-grey2 t-font-smooth t-base t-400 t-no-underline d-inline-block" role="menuitem">
+								<div class="t-lh-1 relative d-flex overflow-hidden">
+									<div class="link__text | d-block t-lh-1">
+										How
+									</div>
+									<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
+										How
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
 				</div>
-			</a>
-		</li>
-	</ul>
-</nav>
+			</nav>
 
-			<div class="d-none d-block@sm | js-header:signInBtnContainer">
-				<a class="button  js-button header__sign-in | link t-font-smooth ml-24 t-base t-500 d-inline-block t-black dark:t-off-white color-animation b-1 b-warm-grey dark:b-header-btn-border b-color-animation rounded-15 t-nowrap t-no-underline relative | js-header:signInBtn" href="https://cosmos.so/discover" rel="noopener noreferrer">
-	<div class="d-flex items-center t-lh-1">
-		<div class="t-lh-1 relative d-flex overflow-hidden z-1">
-						<div class="link__text | d-block t-lh-1 pb-1">
-							Log In
-						</div>
-						<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1 pb-1">
-							Log In
-						</div>
-					</div>
-					<div class="button__border | absolute rounded-15 top left"></div>
-	</div>
-</a>
-			</div>
-
-			<div class="w-1/1 h-1/1 w-auto@sm absolute relative@sm d-flex items-center">
-				<button class="header__mobile-close | z-10 t-off-white d-block d-none@sm ml-8 ml-0@sm mr-14 px-0 absolute | js-header:closeForm">
-					<svg aria-hidden="true" class='header__mobile-close__svg | pointer-events-none stroke-black dark:stroke-off-white fill-animation'>
-                <use xlink:href="#close"></use>
-            </svg>
-				</button>
-
-				<form class="waitlist-form | d-flex items-center justify-end | js-header:formContainer js-forms:emailForm">
-					<div class="waitlist-form__button-placeholder | mr-14 d-block d-none@sm pointer-events-none"></div>
-
-					<div class="waitlist-form__input | rounded-15 absolute@sm | js-header:inputContainer" style="overflow: hidden;">
-						<div class="h-1/1 relative d-flex justify-center | js-header:input">
-							<div class="absolute top left t-16 t-black dark:t-off-white color-animation center-xy t-nowrap px-24 pointer-events-none z-10 | js-header:confirmationText" style="opacity: 0;">You're on the list!</div>
-                            <label for="header_email" class="sr">Enter your email</label>
-							<input class="waitlist-form__input__el | w-1/1 w-auto@sm rounded-15 bg-off-white color-animation dark:bg-form-input bg-animation t-grey2 t-base t-font-smoothing t-500 t-lh-1 | js-header:inputEl js-forms:email" required type="email" spellcheck="false" id="header_email" placeholder="Enter your email..." autocomplete="off">
-							<div class="waitlist-form__input__border | absolute fill pointer-events-none"></div>
-						</div>
-					</div>
-					<div class="relative | js-header:submitContainer">
-                        <div class="relative z-0">
-                            <button type="submit" class="button link t-font-smooth opacity-0 bg-black dark:bg-off-white bg-animation ml-6 t-500 t-base d-inline-block dark:t-black t-off-white color-animation b-0 rounded-15 t-nowrap t-no-underline | js-header:submit">
-                                <div class="t-lh-1 relative d-flex overflow-hidden z-1 | js-header:submitText">
-                                  <div class="link__text | d-block t-lh-1 pb-1">
-                                    Sign up
-                                  </div>
-                                  <div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1 pb-1">
-                                    Sign up
-                                  </div>
-                                </div>
-                            </button>
-                        </div>
-
-						<div class="absolute fill z-10 center-xy | js-header:waitlistLoadingContainer">
-							<div class="loading-indicator | center-x | js-header:waitlistLoading"></div>
-						</div>
-					</div>
-				</form>
-
-				<div class="header__tick header__tick--waitlist | absolute top left@sm h-1/1 d-flex items-center | js-header:tickContainer">
-					<div class="mx-16 overflow-hidden | js-header:tickMask">
-						<svg aria-hidden="true" class='header__tick__svg | fill-black dark:fill-off-white fill-animation | js-header:tickSvg'>
-                <use xlink:href="#tick"></use>
-            </svg>
-					</div>
 				</div>
 			</div>
 
 			<div class="absolute@sm right center-y@sm z-10">
 				<div class="relative z-0">
-				<a class="button d-none@sm bg-tweet-bg-light dark:bg-header | link t-font-smooth ml-24 t-base t-500 d-inline-block t-black dark:t-off-white color-animation b-1 b-warm-grey dark:b-header-btn-border b-color-animation rounded-15 t-nowrap t-no-underline relative" href="https://cosmos.so/login" rel="noopener noreferrer">
-                    <div class="d-flex items-center t-lh-1">
-                    <div class="t-lh-1 relative d-flex overflow-hidden z-1">
-                        <div class="link__text | d-block t-lh-1 pb-1">
-                        Log In
-                        </div>
-                        <div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1 pb-1">
-                        Log In
-                        </div>
-                    </div>
-                    <div class="button__border | absolute rounded-15 top left"></div>
-                    </div>
-                </a>
 
 
-                    <button class="button link t-font-smooth bg-black dark:bg-off-white bg-animation ml-6 t-500 t-base d-inline-block dark:t-black t-off-white color-animation b-0 rounded-15 t-nowrap t-no-underline | js-header:openFormTrigger" aria-label="Sign up">
-                        <div class="t-lh-1 relative d-flex overflow-hidden z-1">
-                            <div class="link__text | d-block t-lh-1">
-                                <div class="d-flex items-center t-lh-1">
-                                    <span class="d-flex | js-header:submitText"><span class="d-inline-block overflow-hidden" style="height: 18px; margin-top: 1px;">Sign&nbsp;up</span></span>
-                                </div>
-                            </div>
-                            <div class="link__text link__text--hover | t-white dark:t-black d-block absolute left t-lh-1" style="height: 18px;">
-                                Sign up
-                            </div>
-                        </div>
 
-                        <span class="button__replacement-text"><span>Joined <svg aria-hidden="true" >
-                <use xlink:href="#tick"></use>
-            </svg></span></span>
-                    </button>
+                    <a class="button t-font-smooth ml-6 t-base t-500 d-inline-block t-black dark:t-black t-off-white bg-off-white color-animation b-0 rounded-15 t-nowrap t-no-underline" href="https://givebutter.com/41st" target="_blank" rel="noopener noreferrer" style="padding: 10px 24px;">
+                        Donate
+                    </a>
                 </div>
 			</div>
 		</div>
@@ -371,23 +313,29 @@ html:not(.dark) .invert-on-light {
                         </a>
                     </li>
 
-                                        <li role="none" class="mb-4">
-                        <a href="/manifesto" class="menu__link | t-black dark:t-off-white" role="menuitem">
-                            Manifesto
+                    <li role="none" class="mb-4">
+                        <a href="#who" class="menu__link | t-black dark:t-off-white" role="menuitem">
+                            Who
                         </a>
                     </li>
-                                        <li role="none" class="mb-4">
-                        <a href="https://work.cosmos.so/" class="menu__link | t-black dark:t-off-white" role="menuitem">
-                            Careers
+                    <li role="none" class="mb-4">
+                        <a href="#mission" class="menu__link | t-black dark:t-off-white" role="menuitem">
+                            Why
                         </a>
                     </li>
-
-                    <li role="none">
-                        <a class="menu__link | d-inline-flex items-baseline t-black dark:t-off-white" href="https://apps.apple.com/app/apple-store/id1577975475?pt=123324404&amp;ct=Landing%20Page&amp;mt=8">
-                            Get app
-                            <svg aria-hidden="true" class='menu__arrow | t-black dark:t-off-white'>
-                <use xlink:href="#arrow-right"></use>
-            </svg>
+                    <li role="none" class="mb-4">
+                        <a href="https://givebutter.com/41st" class="menu__link | t-black dark:t-off-white" role="menuitem" target="_blank">
+                            Donate
+                        </a>
+                    </li>
+                    <li role="none" class="mb-4">
+                        <a href="#programs" class="menu__link | t-black dark:t-off-white" role="menuitem">
+                            What
+                        </a>
+                    </li>
+                    <li role="none" class="mb-4">
+                        <a href="#financials" class="menu__link | t-black dark:t-off-white" role="menuitem">
+                            How
                         </a>
                     </li>
                 </ul>
@@ -420,28 +368,20 @@ html:not(.dark) .invert-on-light {
 	</div>
 
 	<div class="absolute center-xy d-flex flex-column items-center | js-site-loader:text">
-			<svg class="landing__wordmark dark:fill-grey | js-home-landing-logo" width="566" height="95" viewBox="0 0 566 95" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M172.402 47.6257C172.402 77.2382 153.52 95 128.846 95C104.172 95 85.2905 77.2382 85.2905 47.6257C85.2905 18.0133 104.172 0.251465 128.846 0.251465C153.52 0.251465 172.402 18.0273 172.402 47.6257ZM129.508 83.1774C146.39 83.1774 159.437 70.0133 159.437 47.6397C159.437 25.2662 146.39 12.116 129.508 12.116H128.267C111.385 12.116 98.3379 25.2802 98.3379 47.6397C98.3379 69.9993 111.316 83.1774 128.267 83.1774H129.508Z"/>
-				<path d="M453.347 47.6257C453.347 77.2382 434.466 95 409.792 95C385.117 95 366.236 77.2382 366.236 47.6257C366.236 18.0133 385.117 0.251465 409.792 0.251465C434.466 0.251465 453.347 18.0273 453.347 47.6257ZM410.44 83.1774C427.321 83.1774 440.369 70.0133 440.369 47.6397C440.369 25.2662 427.335 12.116 410.44 12.116H409.143C392.262 12.116 379.214 25.2802 379.214 47.6397C379.214 69.9993 392.262 83.1774 409.143 83.1774H410.44Z"/>
-				<path d="M80.6149 64.7308C79.3461 84.8683 61.5818 95 43.5555 95C18.8814 95 0 77.2382 0 47.6257C0 18.0133 18.8814 0.251465 43.5555 0.251465C63.0438 0.251465 79.2357 11.04 80.6149 30.5207H67.5814C67.1124 20.5148 57.5683 12.0881 44.1348 12.0881H42.8383C25.9568 12.0881 12.9094 25.2522 12.9094 47.6257C12.9094 69.9993 26.0119 83.1774 42.9073 83.1774H44.2037C54.865 83.1774 66.7676 77.3779 67.6503 64.7588L80.6149 64.7308Z"/>
-				<path d="M214.344 12.1023H213.047C201.751 12.1023 194.221 18.2931 194.221 26.4404C194.221 33.5535 199.02 37.7599 206.634 39.3391L221.171 42.2318C236.894 45.3901 245.996 53.8169 245.996 68.7838C245.996 84.9665 232.494 94.9724 212.357 94.9724C190.938 94.9724 177.298 84.4494 176.65 64.0463H189.642C189.642 76.5537 199.296 83.1358 212.882 83.1358H214.178C226.384 83.1358 233.004 76.945 233.004 69.3148C233.004 61.6846 228.329 57.4782 218.729 55.4938L204.179 52.4753C189.642 49.4428 181.201 41.1558 181.201 26.5522C181.201 11.9486 194.055 0.237793 213.654 0.237793C233.79 0.237793 246.645 11.4176 247.293 29.1794H234.301C233.694 18.6844 225.391 12.1023 214.344 12.1023Z"/>
-				<path d="M271.512 13.1502V93.6864H258.519V1.5791H280.076L307.219 81.3188L333.838 1.5791H355.271V93.6864H342.293V12.7589L315.536 93.6864H298.903L271.512 13.1502Z"/>
-				<path d="M494.916 12.1023H493.62C482.324 12.1023 474.794 18.2931 474.794 26.4404C474.794 33.5535 479.593 37.7599 487.207 39.3391L501.743 42.2318C517.467 45.3901 526.569 53.8169 526.569 68.7838C526.569 84.9665 513.067 94.9724 492.93 94.9724C471.497 94.9724 457.871 84.4494 457.223 64.0463H470.311C470.311 76.5537 479.966 83.1358 493.565 83.1358H494.861C507.067 83.1358 513.687 76.945 513.687 69.3148C513.687 61.6846 509.012 57.4782 499.413 55.4938L484.862 52.4753C470.311 49.4428 461.87 41.1558 461.87 26.5522C461.87 11.9486 474.725 0.237793 494.337 0.237793C514.474 0.237793 527.328 11.4176 527.976 29.1794H514.984C514.267 18.6844 505.964 12.1023 494.916 12.1023Z"/>
-				<path d="M551.023 29.2909C553.881 29.2798 556.673 28.4101 559.044 26.7916C561.414 25.1732 563.258 22.8787 564.342 20.1984C565.426 17.518 565.701 14.5722 565.133 11.7335C564.564 8.89472 563.178 6.29049 561.149 4.25012C559.12 2.20975 556.539 0.824876 553.733 0.27062C550.927 -0.283636 548.022 0.0176234 545.385 1.1363C542.748 2.25498 540.498 4.14083 538.919 6.55538C537.339 8.96993 536.502 11.8047 536.513 14.7013C536.539 18.5821 538.079 22.2949 540.798 25.0286C543.516 27.7623 547.192 29.2947 551.023 29.2909ZM551.023 26.5938C548.684 26.6131 546.392 25.9275 544.439 24.6239C542.486 23.3204 540.96 21.4578 540.054 19.2731C539.148 17.0883 538.904 14.68 539.353 12.3543C539.801 10.0286 540.922 7.89052 542.573 6.21194C544.224 4.53336 546.33 3.39007 548.624 2.92739C550.917 2.4647 553.295 2.70355 555.455 3.61354C557.614 4.52353 559.458 6.06357 560.751 8.03789C562.044 10.0122 562.729 12.3316 562.718 14.7013C562.726 17.8532 561.501 20.8797 559.312 23.1189C557.122 25.358 554.147 26.6275 551.036 26.6497L551.023 26.5938ZM551.174 21.8563C554.884 21.8563 556.912 20.0257 557.105 16.8255H554.25C554.18 17.5343 553.836 18.1864 553.294 18.6394C552.751 19.0923 552.054 19.3093 551.354 19.2431H551.023C548.609 19.2431 547.506 17.077 547.506 14.4358C547.506 11.7946 548.609 9.62847 551.023 9.62847H551.326C552.025 9.57958 552.717 9.8023 553.26 10.2514C553.803 10.7004 554.157 11.3421 554.25 12.0461H557.105C556.912 8.8459 554.884 7.01521 551.174 7.01521C547.464 7.01521 544.609 9.5586 544.609 14.4358C544.609 19.313 547.285 21.8563 551.174 21.8563Z"/>
-			</svg>
+		<img src="assets/ToFF2025_Logo_Black_1.svg" alt="Tom of Finland Foundation" class="landing__wordmark | js-home-landing-logo" style="height: 80px; width: auto; max-width: 90vw;">
 
-			<div class="mt-18 mt-24@sm mt-32@md opacity-0">
-				<div class="t-warm-grey dark:t-grey color-animation t-14 t-18@sm t-22@md t-400">
+		<div class="mt-18 mt-24@sm mt-32@md opacity-0">
+			<div class="t-warm-grey dark:t-grey color-animation t-14 t-18@sm t-22@md t-400">
 
 
 
-						<div class="d-inline-block px-12 px-12@sm px-14@md py-7 py-9@sm py-10@md">
-							&nbsp;
-						</div>
-
+				<div class="d-inline-block px-12 px-12@sm px-14@md py-7 py-9@sm py-10@md">
+					&nbsp;
 				</div>
+
 			</div>
 		</div>
+	</div>
 </div>
         <div class="mode-toggle | user-select-none t-base t-400 t-white fixed t-lh-1 | js-mode-toggle">
 
@@ -547,7 +487,13 @@ html:not(.dark) .invert-on-light {
         </div>
 
         <section class="container-fluid h-100vh d-flex flex-column justify-center items-center relative | js-manifesto:hero">
-            <h1 class="manifesto__title | t-sans t-center | js-manifesto:title js-no-split">Tom of Finland Foundation’s 41 years and counting: We Protect Queer Art. We Queer the Canon. We Nurture Artists.</h1>
+            <h1 class="manifesto__title | t-sans t-center | js-manifesto:title js-no-split">Welcome to Tom of Finland Foundation’s 41 Birthday.</h1>
+            <div class="t-sans t-center t-18 t-22@md mt-20 | js-manifesto:subtitle">
+                For 41 years,<br>
+                We Protect Queer Art.<br>
+                We Queer the Canon.<br>
+                We Nurture Artists.
+            </div>
 
             <div class="manifesto__audio-notice | t-300 t-center | js-manifesto:audioNotice">
                 <div class="manifesto__enable-sound | js-manifesto:audioText">Click anywhere to enable audio.</div>
@@ -558,16 +504,25 @@ html:not(.dark) .invert-on-light {
         <section class="js-manifesto:container">
             <div class="container-fluid h-100vh d-flex flex-column justify-center items-center | js-manifesto:secondSection">
                 <h2 class="manifesto__secondary-text t-center mb-0 | js-manifesto:text">
-                    We steward the legacy of Tom of Finland so that freedom of expression remains, sexual and queer liberation expands, and global LGBTQIA2S+ futures thrive. <br><br>
-                    December 11, 2025. APPARATUS, New York City.
+                    We steward the legacy of Tom of Finland so that freedom of expression remains, sexual and queer liberation expands, and global Queer futures thrive. <br><br>
+                    <span class="t-warm-grey t-18 t-22@md d-block mt-20">December 11, 2025. APPARATUS</span>
                 </h2>
             </div>
 
             <div class="js-manifesto:blocksContainer">
-                <div class="container-fluid mb-10vh">
+                <div class="container-fluid mb-10vh" id="who">
                     <div class="w-1/1 offset-2/24@md w-1/2@sm w-8/24@md w-7/24@lg w-6/24@xlg | js-manifesto:block">
                         <div class="js-block-inner">
-                            <h3 class="t-warm-grey t-ls--1 t-300 t-uppercase t-12 t-14@sm t-base@md mb-18 mb-20@md">01. The Mission</h3>
+                            <h3 class="t-warm-grey t-ls--1 t-300 t-uppercase t-12 t-14@sm t-base@md mb-18 mb-20@md">01. Who</h3>
+                            <p class="manifesto__section-text | mb-0 | js-manifesto:text">Tom of Finland Foundation, founded in 1984, holds the largest collection of Tom of Finland Drawings, safeguards the world’s largest collection of queer and erotic art — including over 1,800 of Tom’s original works, thousands of photographs, letters, and archives. For over 40 years, we’ve nurtured artists, hosted one of the longest-running queer residencies, and brought exhibitions to audiences from Los Angeles to London, Paris, Berlin and Helsinki.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid mb-10vh" id="mission">
+                    <div class="w-1/1 offset-2/24@md w-1/2@sm w-8/24@md w-7/24@lg w-6/24@xlg | js-manifesto:block">
+                        <div class="js-block-inner">
+                            <h3 class="t-warm-grey t-ls--1 t-300 t-uppercase t-12 t-14@sm t-base@md mb-18 mb-20@md">02. Why</h3>
                             <p class="manifesto__section-text | mb-0 | js-manifesto:text">Why We Gather<br><br>On December 11, we descend upon APPARATUS in Chelsea to celebrate resilience. But this is more than an affair; it is an act of stewardship.</p>
                         </div>
                     </div>
@@ -584,24 +539,16 @@ html:not(.dark) .invert-on-light {
                 <div class="container-fluid  mb-10vh ">
                     <div class="w-1/1 offset-4/24@sm offset-6/24@md w-1/2@sm w-8/24@md w-7/24@lg w-6/24@xlg | js-manifesto:block">
                         <div class="js-block-inner">
-                            <p class="manifesto__section-text | mb-0 | js-manifesto:text">Our Mission is Absolute<br><br>We steward the legacy of Tom of Finland so that freedom of expression remains, sexual and queer liberation expands, and global LGBTQIA2S+ futures thrive. We protect queer and queer art. We queer the canon. We nurture artists. We foster belonging. We strengthen LGBTQIA2S+ lives.</p>
+                            <p class="manifesto__section-text | mb-0 | js-manifesto:text">Our Mission is Absolute<br><br>We steward the legacy of Tom of Finland so that freedom of expression remains, sexual and queer liberation expands, and global queer futures thrive. We protect queer and queer art. We queer the canon. We nurture artists. We foster belonging. We strengthen queer lives.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="container-fluid  mb-128 mb-264@md ">
-                    <div class="w-1/1 offset-10/24@sm offset-13/24@md w-1/2@sm w-8/24@md w-7/24@lg w-6/24@xlg | js-manifesto:block">
-                        <div class="js-block-inner">
-                            <p class="manifesto__section-text | mb-0 | js-manifesto:text">Your contribution sustains four critical pillars of action.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid mb-10vh">
+                <div class="container-fluid mb-10vh" id="programs">
                     <div class="w-1/1 offset-3/24@md w-1/2@sm w-8/24@md w-7/24@lg w-6/24@xlg | js-manifesto:block">
                         <div class="js-block-inner">
-                            <h3 class="t-warm-grey t-ls--1 t-300 t-uppercase t-12 t-14@sm t-base@md mb-18 mb-20@md">02. Our Programs</h3>
-                            <p class="manifesto__section-text | mb-0 | js-manifesto:text">I. Nurturing Artists: The Residency (AIR)<br><br>"Creativity Requires Sanctuary." The Artist-in-Residence program provides the ultimate luxury to QTBIPOC and queer artists: Time and Space. We invite artists to live at the Foundation House (Maison Tom) in Los Angeles for 3-month cycles.</p>
+                            <h3 class="t-warm-grey t-ls--1 t-300 t-uppercase t-12 t-14@sm t-base@md mb-18 mb-20@md">03. What</h3>
+                            <p class="manifesto__section-text | mb-0 | js-manifesto:text">Your contribution sustains four critical pillars of action.<br><br>I. Nurturing Artists: The Residency (AIR)<br><br>"Creativity Requires Sanctuary." The Artist-in-Residence program provides the ultimate luxury to QTBIPOC and queer artists: Inspration and Safe Space. We invite artists to live at the Foundation House in Los Angeles for 3-month cycles.</p>
                         </div>
                     </div>
                 </div>
@@ -624,7 +571,7 @@ html:not(.dark) .invert-on-light {
                                         <strong class="t-off-white">Queer History</strong>
                                         <div class="research-toggle__icon"></div>
                                     </div>
-                                    <div class="research-toggle__content">
+                                    <div class="research-toggle__content t-off-white">
                                         We document and archive the lineages of our community to ensure our stories are canonized in history books rather than erased.
                                     </div>
                                 </div>
@@ -633,7 +580,7 @@ html:not(.dark) .invert-on-light {
                                         <strong class="t-off-white">Queer Culture</strong>
                                         <div class="research-toggle__icon"></div>
                                     </div>
-                                    <div class="research-toggle__content">
+                                    <div class="research-toggle__content t-off-white">
                                         We support exhibitions and publications that celebrate the nuances of our lifestyle as essential cultural heritage.
                                     </div>
                                 </div>
@@ -642,16 +589,16 @@ html:not(.dark) .invert-on-light {
                                         <strong class="t-off-white">Queer Psychology</strong>
                                         <div class="research-toggle__icon"></div>
                                     </div>
-                                    <div class="research-toggle__content">
+                                    <div class="research-toggle__content t-off-white">
                                         We fund research into the positive mental health impacts of sexual expression and community belonging to combat stigma with science.
                                     </div>
                                 </div>
                                 <div class="research-toggle | js-research-toggle">
                                     <div class="research-toggle__header">
-                                        <strong class="t-off-white">Queer Sexuality (BDSM)</strong>
+                                        <strong class="t-off-white">Queer Sexuality</strong>
                                         <div class="research-toggle__icon"></div>
                                     </div>
-                                    <div class="research-toggle__content">
+                                    <div class="research-toggle__content t-off-white">
                                         We preserve the artifacts and history of leather and kink, framing these practices as vital expressions of human intimacy and trust.
                                     </div>
                                 </div>
@@ -660,7 +607,7 @@ html:not(.dark) .invert-on-light {
                                         <strong class="t-off-white">Queer Art Preservation</strong>
                                         <div class="research-toggle__icon"></div>
                                     </div>
-                                    <div class="research-toggle__content">
+                                    <div class="research-toggle__content t-off-white">
                                         We provide the technical stewardship to restore and protect aging erotic artworks, ensuring they survive for future generations.
                                     </div>
                                 </div>
@@ -669,7 +616,7 @@ html:not(.dark) .invert-on-light {
                                         <strong class="t-off-white">Queer Art Community Engagement</strong>
                                         <div class="research-toggle__icon"></div>
                                     </div>
-                                    <div class="research-toggle__content">
+                                    <div class="research-toggle__content t-off-white">
                                         We foster belonging through life drawing classes, workshops, and salons that create safe spaces for shared creative expression.
                                     </div>
                                 </div>
@@ -686,10 +633,10 @@ html:not(.dark) .invert-on-light {
                     </div>
                 </div>
 
-                <div class="container-fluid mb-10vh">
+                <div class="container-fluid mb-10vh" id="financials">
                     <div class="w-1/1 offset-2/24@md w-1/2@sm w-8/24@md w-7/24@lg w-6/24@xlg | js-manifesto:block">
                         <div class="js-block-inner">
-                            <h3 class="t-warm-grey t-ls--1 t-300 t-uppercase t-12 t-14@sm t-base@md mb-18 mb-20@md">03. Financial Transparency</h3>
+                            <h3 class="t-warm-grey t-ls--1 t-300 t-uppercase t-12 t-14@sm t-base@md mb-18 mb-20@md">04. How</h3>
                             <p class="manifesto__section-text | mb-0 | js-manifesto:text">Where Your Donation Goes<br><br>We are a 501(c)(3) non-profit foundation. We do not have corporate shareholders; we have a community to answer to. Every dollar raised tonight supports the ecosystem of the Foundation.</p>
                         </div>
                     </div>
@@ -703,10 +650,10 @@ html:not(.dark) .invert-on-light {
                     </div>
                 </div>
 
-                <div class="container-fluid  mb-128 mb-264@md ">
+                <div class="container-fluid  mb-128 mb-264@md " id="partners">
                     <div class="w-1/1 offset-4/24@sm offset-6/24@md w-1/2@sm w-8/24@md w-7/24@lg w-6/24@xlg | js-manifesto:block">
                         <div class="js-block-inner">
-                            <h3 class="t-warm-grey t-ls--1 t-300 t-uppercase t-12 t-14@sm t-base@md mb-18 mb-20@md">04. Made Possible By</h3>
+                            <h3 class="t-warm-grey t-ls--1 t-300 t-uppercase t-12 t-14@sm t-base@md mb-18 mb-20@md">05. Partners</h3>
                             <p class="manifesto__section-text | mb-0 | js-manifesto:text">We extend our deepest gratitude to the partners who have generously offered their space, spirits, and resources to build this sanctuary for us tonight.<br><br>Sponsor: <a href="https://apparatusstudio.com" target="_blank" class="t-off-white t-no-underline">APPARATUS</a><br>Liquor Sponsor: <a href="https://www.misguidedspirits.com" target="_blank" class="t-off-white t-no-underline">Misguided Spirits</a></p>
                         </div>
                     </div>
@@ -721,7 +668,7 @@ html:not(.dark) .invert-on-light {
                 <div class="t-center t-16 t-18@sm t-22@md t-lh-1.4 t-warm-grey mb-32 mb-48@md w-20/24 w-14/24@sm w-10/24@md">
                     Tom of Finland created a world where we could be free, proud, and joyful. Today, the Foundation ensures that world keeps expanding.<br><br>
                     Whether you are housing an artist in LA, funding a research initiative on queer subjects, or supporting a human rights panel and discussion, you are part of the stewardship.<br><br>
-                    <strong class="t-off-white">We foster belonging. We strengthen LGBTQIA2S+ lives.</strong>
+                    <strong class="t-off-white">We foster belonging. We strengthen Queer lives.</strong>
                 </div>
 
 				<div class=" relative | js-forms js-cta-footer">
@@ -826,109 +773,10 @@ onclick="
 	<footer class="footer | bg-footer-light dark:bg-footer-dark bg-animation pt-28 pt-43@sm pt-84@md w-1/1 | js-footer" aria-label="Website footer">
 	<div class="footer__inner | d-flex mb-40 | js-footer:inner">
 		<div class="footer__text | d-flex items-center flex-column d-block@sm">
-			<img src="assets/toff-logo-white.png" alt="ToFF Logo" class="footer__logomark mb-16" style="height: 40px; width: auto;">
-			<p class="t-black dark:t-off-white color-animation t-center t-left@sm t-20 t-28@sm t-lh-1 mb-0 t-300 t-lh-1.1">The Foundation is the home you’ve been searching for.</p>
             <p class="t-grey t-center t-left@sm t-14 mt-20">
-                124 West 30th Street, NY, NY 10001<br><br>
                 <strong>Made Possible By:</strong><br>
                 <a href="https://apparatusstudio.com" target="_blank" class="t-grey t-no-underline">APPARATUS</a> & <a href="https://www.misguidedspirits.com" target="_blank" class="t-grey t-no-underline">Misguided Spirits</a>
             </p>
-		</div>
-
-		<div class="footer__cols | d-none d-block@sm">
-			<ul class="list-unstyled mb-0 grid h-1/1" role="menubar" aria-label="Footer navigation">
-									<li class="w-8/24 w-7/24@md d-flex flex-column justify-end" role="none">
-						<p class="footer__subtitles | t-d-warm-grey dark:t-warm-grey t-14 t-uppercase mb-12 mb-14@md">Useful</p>
-
-													<ul class="list-unstyled" role="menu" aria-label="Submenu for Useful">
-																	<li role="none" class="t-lh-1.55">
-										<a href="/manifesto" class="link link--footer | t-black dark:t-warm-grey t-font-smooth t-base t-300 t-no-underline d-inline-block" role="menuitem">
-											<div class="t-lh-1 relative d-flex overflow-hidden">
-												<div class="link__text | d-block t-lh-1">
-													Manifesto
-												</div>
-												<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
-													Manifesto
-												</div>
-											</div>
-										</a>
-									</li>
-																	<li role="none" class="t-lh-1.55">
-										<a href="https://work.cosmos.so/" class="link link--footer | t-black dark:t-warm-grey t-font-smooth t-base t-300 t-no-underline d-inline-block" role="menuitem">
-											<div class="t-lh-1 relative d-flex overflow-hidden">
-												<div class="link__text | d-block t-lh-1">
-													Careers
-												</div>
-												<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
-													Careers
-												</div>
-											</div>
-										</a>
-									</li>
-															</ul>
-											</li>
-									<li class="w-8/24 w-8/24@md d-flex flex-column justify-end" role="none">
-						<p class="footer__subtitles | t-d-warm-grey dark:t-warm-grey t-14 t-uppercase mb-12 mb-14@md">Legal</p>
-
-													<ul class="list-unstyled" role="menu" aria-label="Submenu for Legal">
-																	<li role="none" class="t-lh-1.55">
-										<a href="/privacy-policy" class="link link--footer | t-black dark:t-warm-grey t-font-smooth t-base t-300 t-no-underline d-inline-block" role="menuitem">
-											<div class="t-lh-1 relative d-flex overflow-hidden">
-												<div class="link__text | d-block t-lh-1">
-													Privacy Policy
-												</div>
-												<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
-													Privacy Policy
-												</div>
-											</div>
-										</a>
-									</li>
-																	<li role="none" class="t-lh-1.55">
-										<a href="https://www.cosmos.so/terms-conditions" class="link link--footer | t-black dark:t-warm-grey t-font-smooth t-base t-300 t-no-underline d-inline-block" role="menuitem">
-											<div class="t-lh-1 relative d-flex overflow-hidden">
-												<div class="link__text | d-block t-lh-1">
-													Terms & Conditions
-												</div>
-												<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
-													Terms & Conditions
-												</div>
-											</div>
-										</a>
-									</li>
-															</ul>
-											</li>
-
-				<li class="offset-2/24 offset-0@md w-6/24 w-8/24@md d-flex flex-column justify-end" role="none">
-					<p class="footer__subtitles | t-warm-grey t-14 t-uppercase mb-12 mb-14@md">Updates</p>
-
-					<ul class="list-unstyled mb-0" role="menu" aria-label="Submenu for Updates">
-						<li role="none" class="t-lh-1.55">
-							<a href="https://twitter.com/thecosmos" class="link link--footer | t-black dark:t-warm-grey t-font-smooth t-base t-300 t-no-underline d-inline-block" role="menuitem">
-								<div class="t-lh-1 relative d-flex overflow-hidden">
-									<div class="link__text | d-block t-lh-1">
-										Twitter
-									</div>
-									<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
-										Twitter
-									</div>
-								</div>
-							</a>
-						</li>
-						<li role="none" class="t-lh-1.55">
-							<a href="https://www.instagram.com/cosmos" class="link link--footer | t-black dark:t-warm-grey t-font-smooth t-base t-300 t-no-underline d-inline-block" role="menuitem">
-								<div class="t-lh-1 relative d-flex overflow-hidden">
-									<div class="link__text | d-block t-lh-1">
-										Instagram
-									</div>
-									<div class="link__text link__text--hover t-black dark:t-off-white | d-block absolute left t-lh-1">
-										Instagram
-									</div>
-								</div>
-							</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
 		</div>
 	</div>
 
@@ -992,6 +840,34 @@ var globalData = {"publicUrl":"\/public\/","assetsUrl":
                 // Toggle current
                 toggle.classList.toggle('is-open');
             });
+        });
+    });
+
+    // Smooth Scroll Logic
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            const scrollContainer = document.querySelector('.scroll-container');
+
+            if (targetElement && scrollContainer) {
+                const headerOffset = 100;
+                // Calculate position relative to the container
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const containerScrollTop = scrollContainer.scrollTop;
+                const offsetPosition = elementPosition + containerScrollTop - headerOffset;
+
+                // Use requestAnimationFrame to ensure smooth execution
+                requestAnimationFrame(() => {
+                    scrollContainer.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                });
+            }
         });
     });
 </script>
