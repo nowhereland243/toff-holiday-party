@@ -34,8 +34,8 @@
       "destination": "/v7_cosmos/manifest.json"
     },
     {
-      "source": "/vortex*",
-      "destination": "/v7_cosmos/vortex*"
+      "source": "/vortex:file*",
+      "destination": "/v7_cosmos/vortex:file*"
     },
     {
       "source": "/background-noise.png",
@@ -46,8 +46,8 @@
       "destination": "/v7_cosmos/Auto-Captions-V6.mp4"
     },
     {
-      "source": "/Favorit-*",
-      "destination": "/v7_cosmos/Favorit-*"
+      "source": "/Favorit-:file*",
+      "destination": "/v7_cosmos/Favorit-:file*"
     },
     {
       "source": "/",
