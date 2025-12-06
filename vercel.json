@@ -1,6 +1,11 @@
 {
+  "name": "toff-holiday",
   "version": 2,
   "rewrites": [
+    {
+      "source": "/intro",
+      "destination": "/v7_cosmos/index_v3.html"
+    },
     {
       "source": "/toff2025-holiday-donation",
       "destination": "/v7_cosmos/index_v3.html"
