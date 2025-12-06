@@ -7,6 +7,10 @@
       "destination": "/v7/index_v3.html"
     },
     {
+      "source": "/favicon.ico",
+      "destination": "/v7/favicon.ico"
+    },
+    {
       "source": "/toff2025-holiday-donation",
       "destination": "/v7/index_v3.html"
     },
