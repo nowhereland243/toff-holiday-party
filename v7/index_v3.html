@@ -108,12 +108,14 @@ html:not(.dark) .invert-on-light {
 <link crossorigin="anonymous" rel='stylesheet' id='module/resources/assets/scss/style.scss-css' href='styles/style.css' media='all' />
 
 <style>
-/* Mobile Section Spacing - Moved here to override style.css */
+/* Mobile Section Spacing - Specific to Section Headers */
 @media (max-width: 767px) {
-    html body .js-manifesto\:blocksContainer .container-fluid.mb-10vh,
-    html body .js-manifesto\:blocksContainer .container-fluid {
-        margin-bottom: 100vh !important;
-        padding-bottom: 0 !important;
+    /* Add full screen breathing room BEFORE each new section */
+    #mission,      /* 02. Why */
+    #programs,     /* 03. What */
+    #financials,   /* 04. How */
+    #partners {    /* 05. Partners */
+        margin-top: 100vh !important;
     }
 }
 </style>
