@@ -180,14 +180,22 @@ html:not(.dark) .invert-on-light {
                     visibility: visible !important;
                 }
                 
-                /* Mobile Donate Button Styles */
+                /* Donate Button Styles - All Screens */
+                a.donate-btn-mobile {
+                    background-color: #771c07 !important;
+                    color: white !important;
+                }
+                
+                /* Mobile Donate Button Positioning */
                 @media (max-width: 767px) {
                     a.donate-btn-mobile {
-                        background-color: #771c07 !important;
-                        color: white !important;
                         position: absolute !important;
                         left: 50% !important;
                         transform: translateX(-50%) !important;
+                        z-index: 1000 !important;
+                        display: inline-block !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
                     }
                 }
 			</style>
@@ -222,7 +230,7 @@ html:not(.dark) .invert-on-light {
 					</ul>
 
 					<!-- Center Button -->
-					<a class="button donate-btn-mobile t-font-smooth t-base t-500 d-inline-block t-black dark:t-black t-off-white bg-off-white color-animation b-0 rounded-15 t-nowrap t-no-underline" href="https://givebutter.com/41st" target="_blank" rel="noopener noreferrer" style="padding: 10px 24px;">
+					<a class="button donate-btn-mobile t-font-smooth t-base t-500 d-inline-block t-black dark:t-black t-off-white bg-off-white color-animation b-0 rounded-15 t-nowrap t-no-underline" href="https://givebutter.com/41st" target="_blank" rel="noopener noreferrer" style="padding: 10px 24px; background-color: #771c07 !important; color: white !important;">
 						Donate
 					</a>
 
