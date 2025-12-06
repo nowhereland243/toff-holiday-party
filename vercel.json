@@ -2,10 +2,6 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/v7_cosmos/index_v3.html"
-    },
-    {
       "source": "/toff2025-holiday-donation",
       "destination": "/v7_cosmos/index_v3.html"
     },
@@ -38,8 +34,20 @@
       "destination": "/v7_cosmos/manifest.json"
     },
     {
-      "source": "/:file",
-      "destination": "/v7_cosmos/:file"
+      "source": "/vortex:file*",
+      "destination": "/v7_cosmos/vortex:file*"
+    },
+    {
+      "source": "/background-noise.png",
+      "destination": "/v7_cosmos/background-noise.png"
+    },
+    {
+      "source": "/Auto-Captions-V6.mp4",
+      "destination": "/v7_cosmos/Auto-Captions-V6.mp4"
+    },
+    {
+      "source": "/",
+      "destination": "/v7_cosmos/index_v3.html"
     }
   ],
   "cleanUrls": true,
