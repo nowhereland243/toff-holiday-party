@@ -2,58 +2,58 @@
   "version": 2,
   "buildCommand": null,
   "outputDirectory": ".",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/toff2025-holiday-donation",
-      "destination": "/v7_cosmos/index_v3.html"
+      "src": "/toff2025-holiday-donation",
+      "dest": "/v7_cosmos/index_v3.html"
     },
     {
-      "source": "/assets/:path*",
-      "destination": "/v7_cosmos/assets/:path*"
+      "src": "/assets/(.*)",
+      "dest": "/v7_cosmos/assets/$1"
     },
     {
-      "source": "/audio/:path*",
-      "destination": "/v7_cosmos/audio/:path*"
+      "src": "/audio/(.*)",
+      "dest": "/v7_cosmos/audio/$1"
     },
     {
-      "source": "/images/:path*",
-      "destination": "/v7_cosmos/images/:path*"
+      "src": "/images/(.*)",
+      "dest": "/v7_cosmos/images/$1"
     },
     {
-      "source": "/fonts/:path*",
-      "destination": "/v7_cosmos/fonts/:path*"
+      "src": "/fonts/(.*)",
+      "dest": "/v7_cosmos/fonts/$1"
     },
     {
-      "source": "/scripts/:path*",
-      "destination": "/v7_cosmos/scripts/:path*"
+      "src": "/scripts/(.*)",
+      "dest": "/v7_cosmos/scripts/$1"
     },
     {
-      "source": "/styles/:path*",
-      "destination": "/v7_cosmos/styles/:path*"
+      "src": "/styles/(.*)",
+      "dest": "/v7_cosmos/styles/$1"
     },
     {
-      "source": "/manifest.json",
-      "destination": "/v7_cosmos/manifest.json"
+      "src": "/manifest.json",
+      "dest": "/v7_cosmos/manifest.json"
     },
     {
-      "source": "/vortex:file*",
-      "destination": "/v7_cosmos/vortex:file*"
+      "src": "/vortex(.*)",
+      "dest": "/v7_cosmos/vortex$1"
     },
     {
-      "source": "/background-noise.png",
-      "destination": "/v7_cosmos/background-noise.png"
+      "src": "/background-noise.png",
+      "dest": "/v7_cosmos/background-noise.png"
     },
     {
-      "source": "/Auto-Captions-V6.mp4",
-      "destination": "/v7_cosmos/Auto-Captions-V6.mp4"
+      "src": "/Auto-Captions-V6.mp4",
+      "dest": "/v7_cosmos/Auto-Captions-V6.mp4"
     },
     {
-      "source": "/Favorit-:file*",
-      "destination": "/v7_cosmos/Favorit-:file*"
+      "src": "/Favorit-(.*)",
+      "dest": "/v7_cosmos/Favorit-$1"
     },
     {
-      "source": "/",
-      "destination": "/v7_cosmos/index_v3.html"
+      "src": "/",
+      "dest": "/v7_cosmos/index_v3.html"
     }
   ],
   "cleanUrls": true,
