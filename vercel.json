@@ -4,59 +4,59 @@
   "rewrites": [
     {
       "source": "/intro",
-      "destination": "/v7_cosmos/index_v3.html"
+      "destination": "/v7/index_v3.html"
     },
     {
       "source": "/toff2025-holiday-donation",
-      "destination": "/v7_cosmos/index_v3.html"
+      "destination": "/v7/index_v3.html"
     },
     {
       "source": "/assets/:path*",
-      "destination": "/v7_cosmos/assets/:path*"
+      "destination": "/v7/assets/:path*"
     },
     {
       "source": "/audio/:path*",
-      "destination": "/v7_cosmos/audio/:path*"
+      "destination": "/v7/audio/:path*"
     },
     {
       "source": "/images/:path*",
-      "destination": "/v7_cosmos/images/:path*"
+      "destination": "/v7/images/:path*"
     },
     {
       "source": "/fonts/:path*",
-      "destination": "/v7_cosmos/fonts/:path*"
+      "destination": "/v7/fonts/:path*"
     },
     {
       "source": "/scripts/:path*",
-      "destination": "/v7_cosmos/scripts/:path*"
+      "destination": "/v7/scripts/:path*"
     },
     {
       "source": "/styles/:path*",
-      "destination": "/v7_cosmos/styles/:path*"
+      "destination": "/v7/styles/:path*"
     },
     {
       "source": "/manifest.json",
-      "destination": "/v7_cosmos/manifest.json"
+      "destination": "/v7/manifest.json"
     },
     {
       "source": "/(vortex.*)",
-      "destination": "/v7_cosmos/$1"
+      "destination": "/v7/$1"
     },
     {
       "source": "/background-noise.png",
-      "destination": "/v7_cosmos/background-noise.png"
+      "destination": "/v7/background-noise.png"
     },
     {
       "source": "/Auto-Captions-V6.mp4",
-      "destination": "/v7_cosmos/Auto-Captions-V6.mp4"
+      "destination": "/v7/Auto-Captions-V6.mp4"
     },
     {
       "source": "/(Favorit-.*)",
-      "destination": "/v7_cosmos/$1"
+      "destination": "/v7/$1"
     },
     {
       "source": "/",
-      "destination": "/v7_cosmos/index_v3.html"
+      "destination": "/v7/index_v3.html"
     }
   ],
   "cleanUrls": false,
