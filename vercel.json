@@ -3,14 +3,24 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/v1/index.html"
+      "destination": "/v7_cosmos/index_v3.html"
     },
     {
       "source": "/(.*)",
-      "destination": "/v1/$1"
+      "destination": "/v7_cosmos/$1"
     }
   ],
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
 }
-
