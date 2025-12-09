@@ -3,6 +3,14 @@
   "version": 2,
   "rewrites": [
     {
+      "source": "/donation",
+      "destination": "/v7/donation/index.html"
+    },
+    {
+      "source": "/donation/(.*)",
+      "destination": "/v7/donation/$1"
+    },
+    {
       "source": "/intro",
       "destination": "/v7/index_v3.html"
     },

@@ -1,0 +1,7 @@
+{
+  "name": "toff-holiday-root",
+  "private": true,
+  "scripts": {
+    "build": "cd donation && npm install && npm run build"
+  }
+}
