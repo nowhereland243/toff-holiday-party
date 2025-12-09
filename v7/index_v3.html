@@ -846,7 +846,7 @@ onclick="window.location.href = 'https://givebutter.com/41st'; return false;"
                 <strong>Made Possible By:</strong><br>
                 <a href="https://apparatusstudio.com" target="_blank" class="d-inline-block align-middle"><img src="assets/APPARATUS_WEB_LOGO_BOLD_white.png" alt="APPARATUS" style="height: 22px; width: auto;"></a>
                 <span class="mx-10 t-grey">&</span>
-                <a href="https://www.misguidedspirits.com" target="_blank" class="d-inline-block align-middle"><img src="assets/misguided_logo_new.svg" alt="Misguided Spirits" style="height: 35px; width: auto;"></a>
+                <a href="https://www.misguidedspirits.com" target="_blank" class="d-inline-block align-middle"><img src="assets/misguided_logo_new.svg" alt="Misguided Spirits" style="height: 55px; width: auto;"></a>
             </p>
 		</div>
 	</div>
@@ -941,6 +941,19 @@ var globalData = {"publicUrl":"public/","assetsUrl":
             }
         });
     });
+
+    // Localhost Loader Bypass
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        console.log('Localhost detected: Bypassing loader...');
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.body.classList.remove('loader-active');
+                const loader = document.querySelector('.site-loader');
+                if (loader) loader.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 500); // Short delay to ensure DOM is ready
+        });
+    }
 </script>
 	</body>
 </html>
