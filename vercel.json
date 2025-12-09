@@ -1,6 +1,7 @@
 {
   "name": "toff-holiday",
   "version": 2,
+  "outputDirectory": ".",
   "rewrites": [
     {
       "source": "/donation",
