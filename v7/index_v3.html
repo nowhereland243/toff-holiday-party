@@ -953,6 +953,14 @@ var globalData = {"publicUrl":"public/","assetsUrl":
                 const loader = document.querySelector('.site-loader');
                 if (loader) loader.style.display = 'none';
                 document.body.style.overflow = 'auto';
+                document.documentElement.style.overflow = 'auto';
+                
+                const scrollContainer = document.querySelector('.scroll-container');
+                if (scrollContainer) {
+                    scrollContainer.style.overflowY = 'auto';
+                    scrollContainer.style.height = '100vh';
+                    scrollContainer.style.position = 'relative'; // Ensure it's not fixed if that's the issue
+                }
             }, 500); // Short delay to ensure DOM is ready
         });
     }
