@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/donation",
-      "destination": "/donation/dist/index.html"
+      "destination": "/donation/dist/main.html"
     },
     {
       "source": "/donation/(.*)",
