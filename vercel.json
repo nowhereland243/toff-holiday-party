@@ -5,11 +5,11 @@
   "rewrites": [
     {
       "source": "/donation",
-      "destination": "/v7/donation/index.html"
+      "destination": "/donation/dist/index.html"
     },
     {
       "source": "/donation/(.*)",
-      "destination": "/v7/donation/$1"
+      "destination": "/donation/dist/$1"
     },
     {
       "source": "/intro",
