@@ -940,14 +940,23 @@ var globalData = {"publicUrl":"public/","assetsUrl":
         });
     });
 
-    // Localhost Loader Bypass
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        console.log('Localhost detected: Bypassing loader...');
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
+    // Loader Fail-Safe: Force site to show after 4 seconds if loader hangs
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            // Check if loader is still active (heuristic)
+            if (document.body.classList.contains('loader-active') || document.querySelector('.site-loader')?.style.display !== 'none') {
+                console.warn('Loader fail-safe triggered: Forcing site display.');
+                
                 document.body.classList.remove('loader-active');
+                
                 const loader = document.querySelector('.site-loader');
-                if (loader) loader.style.display = 'none';
+                if (loader) {
+                    loader.style.transition = 'opacity 0.5s ease';
+                    loader.style.opacity = '0';
+                    loader.style.pointerEvents = 'none';
+                    setTimeout(() => { loader.style.display = 'none'; }, 500);
+                }
+                
                 document.body.style.overflow = 'auto';
                 document.documentElement.style.overflow = 'auto';
                 
@@ -955,11 +964,11 @@ var globalData = {"publicUrl":"public/","assetsUrl":
                 if (scrollContainer) {
                     scrollContainer.style.overflowY = 'auto';
                     scrollContainer.style.height = '100vh';
-                    scrollContainer.style.position = 'relative'; // Ensure it's not fixed if that's the issue
+                    scrollContainer.style.position = 'relative';
                 }
-            }, 500); // Short delay to ensure DOM is ready
-        });
-    }
+            }
+        }, 4000); // 4 seconds timeout
+    });
 </script>
 	</body>
 </html>
