@@ -957,10 +957,7 @@ var globalData = {"publicUrl":"public/","assetsUrl":
                     setTimeout(() => { loader.style.display = 'none'; }, 500);
                 }
                 
-                // Force native scroll
-                document.body.style.setProperty('overflow', 'auto', 'important');
-                document.documentElement.style.setProperty('overflow', 'auto', 'important');
-                
+                // Try to enable native scroll on container
                 const scrollContainer = document.querySelector('.scroll-container');
                 if (scrollContainer) {
                     scrollContainer.style.setProperty('overflow-y', 'auto', 'important');
@@ -969,14 +966,21 @@ var globalData = {"publicUrl":"public/","assetsUrl":
                     scrollContainer.style.pointerEvents = 'auto';
                 }
                 
-                // Re-assert after a moment in case theme.js overrides
+                // Re-assert and try to refresh smooth scroll after a moment
                 setTimeout(() => {
-                    console.log('Re-asserting overflow auto');
-                    document.body.style.setProperty('overflow', 'auto', 'important');
-                    document.documentElement.style.setProperty('overflow', 'auto', 'important');
+                    console.log('Re-asserting overflow and refreshing scroll');
                     if (scrollContainer) {
                         scrollContainer.style.setProperty('overflow-y', 'auto', 'important');
                         scrollContainer.style.pointerEvents = 'auto';
+                    }
+                    window.dispatchEvent(new Event('resize'));
+                    if (window.gsap && window.gsap.ScrollTrigger) {
+                        try {
+                            window.gsap.ScrollTrigger.refresh();
+                            console.log('ScrollTrigger refreshed');
+                        } catch (e) {
+                            console.warn('Failed to refresh ScrollTrigger:', e);
+                        }
                     }
                 }, 1000);
             }
