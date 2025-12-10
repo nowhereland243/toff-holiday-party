@@ -52,6 +52,10 @@
       "destination": "/v7/manifest.json"
     },
     {
+      "source": "/GTSuperDisplay-Light.woff2",
+      "destination": "/v7/fonts/gt-super/GTSuperDisplay-Light.woff2"
+    },
+    {
       "source": "/(vortex.*)",
       "destination": "/v7/$1"
     },
