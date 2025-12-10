@@ -957,15 +957,28 @@ var globalData = {"publicUrl":"public/","assetsUrl":
                     setTimeout(() => { loader.style.display = 'none'; }, 500);
                 }
                 
-                document.body.style.overflow = 'auto';
-                document.documentElement.style.overflow = 'auto';
+                // Force native scroll
+                document.body.style.setProperty('overflow', 'auto', 'important');
+                document.documentElement.style.setProperty('overflow', 'auto', 'important');
                 
                 const scrollContainer = document.querySelector('.scroll-container');
                 if (scrollContainer) {
-                    scrollContainer.style.overflowY = 'auto';
+                    scrollContainer.style.setProperty('overflow-y', 'auto', 'important');
                     scrollContainer.style.height = '100vh';
                     scrollContainer.style.position = 'relative';
+                    scrollContainer.style.pointerEvents = 'auto';
                 }
+                
+                // Re-assert after a moment in case theme.js overrides
+                setTimeout(() => {
+                    console.log('Re-asserting overflow auto');
+                    document.body.style.setProperty('overflow', 'auto', 'important');
+                    document.documentElement.style.setProperty('overflow', 'auto', 'important');
+                    if (scrollContainer) {
+                        scrollContainer.style.setProperty('overflow-y', 'auto', 'important');
+                        scrollContainer.style.pointerEvents = 'auto';
+                    }
+                }, 1000);
             }
         }, 4000); // 4 seconds timeout
     });
