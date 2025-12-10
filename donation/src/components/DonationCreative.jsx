@@ -218,6 +218,7 @@ const DonationCreative = () => {
                                 <motion.button 
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
+                                    onClick={() => window.open('https://givebutter.com/41st', '_blank')}
                                     className="px-12 py-4 bg-white text-black font-oswald font-bold uppercase tracking-widest text-lg hover:bg-gray-200 transition-colors"
                                 >
                                     Donate to {tiers.find(t => t.id === activeTier).title.replace('[', '').replace(']', '')}
@@ -282,7 +283,10 @@ const DonationCreative = () => {
                                             </div>
 
                                             <div className="mt-8">
-                                                <button className="w-full py-3 bg-white text-black font-oswald font-bold uppercase tracking-widest text-sm hover:bg-gray-200 transition-colors">
+                                                <button 
+                                                    onClick={() => window.open('https://givebutter.com/41st', '_blank')}
+                                                    className="w-full py-3 bg-white text-black font-oswald font-bold uppercase tracking-widest text-sm hover:bg-gray-200 transition-colors"
+                                                >
                                                     Donate Now
                                                 </button>
                                             </div>
