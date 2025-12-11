@@ -53,12 +53,12 @@ const DonationCreative = () => {
         {
             id: 'aroused',
             title: '[I. Artists-in-Residence]',
-            description: 'Empower resident artists to bring bold, boundary-pushing visions to life.',
+            description: 'Empower artists to bring bold, boundary-pushing visions to life.',
         },
         {
             id: 'scholars',
             title: '[II. The Archives]',
-            description: 'Help preserve our publishing catalogue and public access to physical media.',
+            description: 'Help us further our goal of preserving history and keeping legacies alive.',
         },
         {
             id: 'extra',
