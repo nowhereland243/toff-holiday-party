@@ -4066,13 +4066,21 @@ void main() {
     vec3 halfDir = normalize(lightDir + viewDir);
     
     float NdotH = max(0.0, dot(normal, halfDir));
-    float specular = pow(NdotH, 100.0); // High shininess
+    
+    // Detect mobile by resolution (width < 768px)
+    bool isMobile = uResolution.x < 768.0;
+    
+    // Reduce specular intensity on mobile for better text readability
+    float specularIntensity = isMobile ? 0.15 : 0.8;
+    float rimIntensity = isMobile ? 0.05 : 0.2;
+    
+    float specular = pow(NdotH, 100.0) * specularIntensity; // High shininess
     
     // Rim light for "sexy" feel
     float rim = 1.0 - max(0.0, dot(viewDir, normal));
-    rim = pow(rim, 3.0);
+    rim = pow(rim, 3.0) * rimIntensity;
     
-    vec3 finalColor = baseColor + vec3(specular) * 0.8 + vec3(rim) * 0.2;
+    vec3 finalColor = baseColor + vec3(specular) + vec3(rim);
     
     gl_FragColor = vec4(finalColor, 1.0);
 }
