@@ -4,6 +4,14 @@
   "outputDirectory": ".",
   "rewrites": [
     {
+      "source": "/donatenow",
+      "destination": "/donation_now/dist/main.html"
+    },
+    {
+      "source": "/donatenow/(.*)",
+      "destination": "/donation_now/dist/$1"
+    },
+    {
       "source": "/donation",
       "destination": "/donation/dist/main.html"
     },

@@ -1,0 +1,26 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  
+  body {
+    @apply bg-rhodium-dark text-rhodium-light font-sans antialiased;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-rhodium-orange via-rhodium-orange-light to-rhodium-orange bg-clip-text text-transparent;
+  }
+}
