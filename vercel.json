@@ -21,19 +21,19 @@
     },
     {
       "source": "/v1",
-      "destination": "/v1/index.html"
+      "destination": "/site_v1/index.html"
     },
     {
       "source": "/v1/:path*",
-      "destination": "/v1/:path*"
+      "destination": "/site_v1/:path*"
     },
     {
       "source": "/tickets",
-      "destination": "/v1/index.html"
+      "destination": "/site_v1/index.html"
     },
     {
       "source": "/tickets/:path*",
-      "destination": "/v1/:path*"
+      "destination": "/site_v1/:path*"
     },
     {
       "source": "/intro",
