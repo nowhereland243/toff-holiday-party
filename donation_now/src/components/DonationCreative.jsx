@@ -63,7 +63,7 @@ const DonationCreative = () => {
         {
             id: 'extra',
             title: '[III. Scholarship]',
-            description: 'Protect the past and future of queer art by supporting research that illuminates its history.',
+            description: 'Protect the past and future of Queer art by supporting research that illuminates our  history.',
         },
         {
             id: 'programming',
@@ -74,15 +74,15 @@ const DonationCreative = () => {
 
     const content = {
         aroused: {
-            intro: "For patrons who are moved by the power of creation itself. Your support directly fuels our Artists-in-Residence program, giving them the time, space, and resources to imagine boldly, work freely, and continue shaping the future of queer art. Every contribution touches a different part of their journey at Tom House.",
+            intro: "For patrons who are moved by the power of creation itself. Your support directly fuels our Artists-in-Residence Program, giving them the time, space, and resources to imagine boldly, work freely, and continue shaping the future of Queer art. Every contribution touches a different part of their journey at TOM House.",
             items: []
         },
         scholars: {
-            intro: "We maintain the world's largest known public catalogue of erotic art and ephemera. This is our defense against censorship in a time where our history is more important than ever. Your donations keep our systems up to date so this important resource is well maintained.",
+            intro: "We maintain the world's largest known collections of erotic art and ephemera. This is our defense against censorship in a time where our history is more important than ever. Your donations keep our systems up to date so this important resource grows, is well maintained and made accessible online.",
             items: []
         },
         extra: {
-            intro: "Legitimizing queer culture requires scholarship that represents its value. We aim to develop ongoing initiatives that center experts from all aspects of the queer life, but need your contribution to set the path. Help define the future of queer art.",
+            intro: "Legitimizing Queer culture requires scholarship that represents its value. We aim to develop ongoing initiatives that center experts from all aspects of the Queer life, but need your contribution to set the path. Help define the future of Queer art.",
             items: []
         },
         programming: {
@@ -124,10 +124,10 @@ const DonationCreative = () => {
                         THE NEXT CHAPTER<br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">STARTS WITH YOU</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-300 reveal-text font-light leading-relaxed max-w-3xl mx-auto">
-                        Queer community is shaped by the acts and contributions of its members. Support for Tom of Finland Foundation directly impacts artistry, preservation, and research for generations to come. Your gift ignites the work that keeps our legacy alive.
+                        Queer community is shaped by the acts and the contributions of its members. Support for Tom of Finland Foundation directly impacts artistry, preservation, and research for generations to come. Your gift ignites the work that keeps our legacy alive.
                     </p>
                     <p className="mt-4 text-gray-400 text-sm reveal-text font-light">
-                        All donations are tax-deductible. Thank you for supporting a queer 501(c)(3) non-profit organization.
+                        All donations are tax-deductible to the extent allowed by law. Thank you for supporting a Queer 501(c)(3) nonprofit organization.
                     </p>
                 </div>
 
