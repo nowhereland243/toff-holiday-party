@@ -28,6 +28,14 @@
       "destination": "/v1/:path*"
     },
     {
+      "source": "/tickets",
+      "destination": "/v1/index.html"
+    },
+    {
+      "source": "/tickets/:path*",
+      "destination": "/v1/:path*"
+    },
+    {
       "source": "/intro",
       "destination": "/v7/index_v3.html"
     },
