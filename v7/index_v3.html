@@ -548,7 +548,14 @@ html:not(.dark) .invert-on-light {
             <div class="d-flex flex-column items-center justify-center h-1/1 w-1/1">
                 <img src="Asset_12222.svg" alt="Tom of Finland Foundation" style="width: 90vw; max-width: 1600px; height: auto; margin-bottom: 40px; margin-top: 15vh; display: block;" class="js-manifesto:logo">
                 <h1 class="manifesto__title | t-sans t-center | js-manifesto:title js-no-split"> </h1>
-                <div class="t-sans t-center t-18 t-22@md mt-20 | js-manifesto:subtitle" style="margin-top: -10vh;">
+                <div class="t-sans t-center t-18 t-22@md | js-manifesto:subtitle" style="margin-top: 20px;">
+                    <style>
+                        @media (min-width: 768px) {
+                            .js-manifesto\:subtitle {
+                                margin-top: -10vh !important;
+                            }
+                        }
+                    </style>
                     Preserving queer art.<br>
                     Celebrating subculture.<br>
                     Protecting expression.<br>
