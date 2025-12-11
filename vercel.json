@@ -2,6 +2,13 @@
   "name": "toff-holiday",
   "version": 2,
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/v7/index_v3.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/donation",
