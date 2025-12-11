@@ -117,13 +117,10 @@ const DonationCreative = () => {
                         />
                     </div>
                     <h1 className="text-4xl md:text-6xl font-bold mb-6 reveal-text font-oswald uppercase tracking-wider leading-none">
-                        Give the Gift of <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">Pleasure & Legacy</span>
+                        THE NEXT CHAPTER<br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">STARTS WITH YOU</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-300 reveal-text font-light leading-relaxed max-w-3xl mx-auto">
-                        Your donation is a direct investment in artists, research, and a community that has been shaping Queer culture for over 40 years. Your gift ignites the work that keeps our legacy alive while sustaining the House that makes it possible.
-                    </p>
-                    <p className="mt-6 text-white font-medium italic reveal-text">
-                        Indulge in the pleasure of giving, and make your support an act of lust and impact.
+                        Queer community is shaped by the acts and contributions of its members. Support for Tom of Finland Foundation directly impacts artistry, preservation, and research for generations to come. Your gift ignites the work that keeps our legacy alive.
                     </p>
                     <p className="mt-4 text-gray-400 text-sm reveal-text font-light">
                         All donations are tax-deductible. Thank you for supporting a queer 501(c)(3) non-profit organization.
