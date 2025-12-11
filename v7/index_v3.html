@@ -950,22 +950,8 @@ var globalData = {"publicUrl":"public/","assetsUrl":
                     setTimeout(() => { loader.style.display = 'none'; }, 500);
                 }
                 
-                // Try to enable native scroll on container
-                const scrollContainer = document.querySelector('.scroll-container');
-                if (scrollContainer) {
-                    scrollContainer.style.setProperty('overflow-y', 'auto', 'important');
-                    scrollContainer.style.height = '100vh';
-                    scrollContainer.style.position = 'relative';
-                    scrollContainer.style.pointerEvents = 'auto';
-                }
-                
-                // Re-assert and try to refresh smooth scroll after a moment
+                // Just trigger a resize to let GSAP recalculate
                 setTimeout(() => {
-                    console.log('Re-asserting overflow and refreshing scroll');
-                    if (scrollContainer) {
-                        scrollContainer.style.setProperty('overflow-y', 'auto', 'important');
-                        scrollContainer.style.pointerEvents = 'auto';
-                    }
                     window.dispatchEvent(new Event('resize'));
                     if (window.gsap && window.gsap.ScrollTrigger) {
                         try {
@@ -977,7 +963,7 @@ var globalData = {"publicUrl":"public/","assetsUrl":
                     }
                 }, 1000);
             }
-        }, 4000); // 4 seconds timeout
+        }, 4000);
     });
 </script>
 	</body>

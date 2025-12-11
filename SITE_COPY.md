@@ -4,16 +4,16 @@
 
 **Welcome to Tom of Finland Foundation's 41 Birthday.**
 
-For 41 years,  
-We Protect Queer Art.  
-We Queer the Canon.  
-We Nurture Artists.
+Preserving queer art. 
+Celebrating subculture. 
+Protecting expression.
+FOR 41 YEARS.
 
 ---
 
 ## Mission Statement
 
-We steward the legacy of Tom of Finland so that freedom of expression remains, sexual and queer liberation expands, and global queer futures thrive.
+Through stewardship of Tom of Finland’s work and related archives, the Foundation advances a broader appreciation of erotic art and champions freedom of expression. 
 
 **December 11, 2025. APPARATUS**
 
@@ -43,17 +43,17 @@ We steward the legacy of Tom of Finland so that freedom of expression remains, s
 
 Your contribution sustains four critical pillars of action.
 
-**I. Nurturing Artists: The Residency (AIR)**
+**I. Nurturing Artists: The Residency**
 
-"Creativity Requires Sanctuary." The Artist-in-Residence program provides the ultimate luxury to QTBIPOC artists: Inspration and Safe Space. We invite artists to live at the Foundation House in Los Angeles for 3-month cycles.
+We invite artists to live at the Tom House in Los Angeles for 3-months cycles. Our Artist-in-Residence program provides the ultimate luxury to QTBIPOC artists: inspiration and safe space. 
 
 **II. Protecting Art: The Archives**
 
-"Fighting Erasure." We maintain the world's largest repository of erotic art and artifacts. This is our defense against censorship. We ensure they survive, and shown to the public to keep inspare.
+We maintain the world's largest known public catalogue of erotic art and ephemera. This is our defense against censorship in a time where our history is more important than ever.
 
 **III. Strengthening Grounds: Research**
 
-"Intellectual Armor." We refuse to let our history be forgotten or our psychology be pathologized. We aim to support research in:
+We refuse to let our history be forgotten or our psychology be pathologized. We aim to support research in:
 
 - **Queer History**: We document and archive the lineages of our community to ensure our stories are canonized in history books rather than erased.
 
@@ -69,7 +69,7 @@ Your contribution sustains four critical pillars of action.
 
 **IV. Global Stage: Public Programming**
 
-"Freedom of Expression as a Human Right." We take the fight for sexual liberation to the global stage. From Los Angeles to our recent edition at Berghain in Berlin, we transform spaces into hubs of education and artistic resistance.
+We bring the fight for queer liberation to a global stage. From our home in Los Angeles to our recent collaboration with Berghain in Berlin, we transform spaces into hubs of education and artistic resistance.
 
 ---
 
@@ -77,25 +77,10 @@ Your contribution sustains four critical pillars of action.
 
 **Where Your Donation Goes**
 
-We are a 501(c)(3) non-profit foundation. We do not have corporate shareholders; we have a community to answer to. Every dollar raised tonight supports the ecosystem of the Foundation.
+We are a 501(c)(3) non-profit foundation. We do not have structural endowments or corporate shareholders. Every dollar raised tonight supports the ecosystem of the Foundation and our dedication to its mission.
 
-**How Far Does Your Donation Go?**
 
-- $500 covers Airfare for an artist.
-- $1,000 covers Food & Essentials.
-- $3,000 covers Housing & Utilities for 3 months.
-- ~Every $5,000 will enable us to unlock one queer subject study.
 
-When rent is paid, the art gets made.
-
----
-
-## 05. Partners
-
-We extend our deepest gratitude to the partners who have generously offered their space, spirits, and resources to build this sanctuary for us tonight.
-
-- **APPARATUS**
-- **Misguided Spirits**
 
 ---
 
@@ -105,4 +90,4 @@ We extend our deepest gratitude to the partners who have generously offered thei
 
 We are launching **Be a Part of Queer History** to unleash the collective power of our community. Queers have always built worlds out of nothing, and we need your talents, networks, and creativity to continue that legacy. Whether offering professional skills, introductions, or financial support, your contribution ensures queer history is preserved, celebrated, and passed on.
 
-**We foster belonging. We strengthen Queer lives.**
+**Preserve queer art. Celebrate subculture. Protect expression.**
