@@ -1,10 +1,10 @@
 {
-  "name": "Cosmos",
-  "short_name": "Cosmos",
-  "description": "",
+  "name": "Tom of Finland Foundation",
+  "short_name": "TOFF",
+  "description": "41st Anniversary Holiday Party",
   "icons": [],
-  "background_color": "#FFFFFF",
-  "start_url": "/login",
+  "background_color": "#000000",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"
 }
