@@ -72,6 +72,10 @@
       "destination": "/v7/$1"
     },
     {
+      "source": "/Asset_12222.svg",
+      "destination": "/v7/Asset_12222.svg"
+    },
+    {
       "source": "/",
       "destination": "/v7/index_v3.html"
     }
