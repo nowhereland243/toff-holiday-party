@@ -48,49 +48,42 @@ const DonationCreative = () => {
     const tiers = [
         {
             id: 'aroused',
-            title: '[Artfully Aroused]',
+            title: '[I. Artists-in-Residence]',
             description: 'Empower resident artists to bring bold, boundary-pushing visions to life.',
         },
         {
             id: 'scholars',
-            title: '[Scholars of Seduction]',
-            description: 'Honor desire through study, supporting research that illuminates Queer art and legacy.',
+            title: '[II. The Archives]',
+            description: 'Help preserve our publishing catalogue and public access to physical media.',
         },
         {
             id: 'extra',
-            title: '[Extra Load(s)]',
-            description: 'Contribute a little extra to the initiative you love.',
+            title: '[III. Scholarship]',
+            description: 'Protect the past and future of queer art by supporting research that illuminates its history.',
+        },
+        {
+            id: 'programming',
+            title: '[IV. Public Programming]',
+            description: 'Activate the community with contributions to global programming development.',
         }
     ];
 
     const content = {
         aroused: {
-            intro: "For patrons who are moved and aroused by the power of creation itself. Your support directly fuels our Artists-in-Residence Program, giving them the time, space, and resources to imagine boldly, work freely, and continue shaping the future of Queer erotic art. Every contribution touches a different part of their journey:",
-            items: [
-                { title: "Fly the Artists", price: "$500", desc: "Covers an artist's airfare so they can arrive at TOM House ready to create." },
-                { title: "Feed the Artists", price: "$1,000", desc: "You supply the essentials that feed the body and ignite the imagination." },
-                { title: "House the Artist", price: "$3,000", desc: "You give an artist a home at TOM House for 2-3 months, a private playground where inspiration, intimacy, and creation come alive." }
-            ]
+            intro: "For patrons who are moved by the power of creation itself. Your support directly fuels our Artists-in-Residence program, giving them the time, space, and resources to imagine boldly, work freely, and continue shaping the future of queer art. Every contribution touches a different part of their journey at Tom House.",
+            items: []
         },
         scholars: {
-            intro: "Every initiative, from queer history and psychology to sexuality, BDSM, and art preservation, thrives on your generous support. Your contributions directly fuel our research, documentation, and scholarship. A contribution of $500 breathes life into a different area of study, making every donation vital.",
-            items: [
-                { title: "Queer History Study", price: "$500", desc: "Help uncover and celebrate the stories of Queer trailblazers who paved the way." },
-                { title: "Queer Culture Study", price: "$500", desc: "Support the exploration of Queer life and expression, keeping vibrant culture alive and visible." },
-                { title: "Queer Psychology Study", price: "$500", desc: "Fund the research that deepens understanding of queer minds, desire, and identity." },
-                { title: "Queer Sexuality Study (BDSM)", price: "$500", desc: "Enable daring investigations into erotic practices, kink, and the freedom to explore." },
-                { title: "Queer Art Preservation", price: "$500", desc: "Protect and maintain Queer erotic art, ensuring these masterpieces endure." },
-                { title: "Queer Art Community Engagement", price: "$500", desc: "Support programs that bring artists, audiences, and enthusiasts together to celebrate and sustain Queer erotic creativity." }
-            ]
+            intro: "We maintain the world's largest known public catalogue of erotic art and ephemera. This is our defense against censorship in a time where our history is more important than ever. Your donations keep our systems up to date so this important resource is well maintained.",
+            items: []
         },
         extra: {
-            intro: "For those with an extra load to give! Gift an additional $200 to the research initiative of your choice and take home a professional portrait to celebrate your impact.",
-            items: [
-                { title: "Add On: Queer History", price: "$200", desc: "Boost the history fund." },
-                { title: "Add On: Queer Culture", price: "$200", desc: "Boost the culture fund." },
-                { title: "Add On: Queer Psychology", price: "$200", desc: "Boost the psychology fund." },
-                { title: "Add On: Sexuality (BDSM)", price: "$200", desc: "Boost the sexuality fund." },
-            ]
+            intro: "Legitimizing queer culture requires scholarship that represents its value. We aim to develop ongoing initiatives that center experts from all aspects of the queer life, but need your contribution to set the path. Help define the future of queer art.",
+            items: []
+        },
+        programming: {
+            intro: "We bring the fight for queer liberation to a global stage. From our home in Los Angeles to our recent collaboration with Berghain in Berlin, we transform spaces into hubs of education and artistic resistance. Join the cause through donation.",
+            items: []
         }
     };
 
@@ -139,7 +132,7 @@ const DonationCreative = () => {
 
                 {/* Desktop: Interactive Tiers Navigation */}
                 <div 
-                    className="hidden md:grid grid-cols-3 gap-6 mb-12 reveal-text"
+                    className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12 reveal-text"
                     style={{ maxWidth: '72rem', width: '100%' }}
                     onMouseLeave={() => setHoveredTier(null)}
                 >
@@ -193,36 +186,35 @@ const DonationCreative = () => {
                                 {content[activeTier].intro}
                             </p>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {content[activeTier].items.map((item, index) => (
-                                    <motion.div
-                                        key={index}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: index * 0.1 }}
-                                        className="group relative border border-white/10 p-6 hover:bg-white/5 transition-colors duration-300 cursor-pointer"
-                                    >
-                                        <div className="flex justify-between items-baseline mb-2">
-                                            <h4 className="text-xl font-oswald font-bold text-white group-hover:text-gray-200 transition-colors">{item.title}</h4>
-                                            <span className="text-lg font-bold text-white/80">{item.price}</span>
-                                        </div>
-                                        <p className="text-sm text-gray-400 font-roboto leading-relaxed">{item.desc}</p>
-                                        
-                                        {/* Hover Effect Line */}
-                                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
-                                    </motion.div>
-                                ))}
-                            </div>
-                            
                             <div className="mt-12 text-center">
-                                <motion.button 
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    onClick={() => window.open('https://givebutter.com/41st', '_blank')}
-                                    className="px-12 py-4 bg-white text-black font-oswald font-bold uppercase tracking-widest text-lg hover:bg-gray-200 transition-colors"
-                                >
-                                    Donate to {tiers.find(t => t.id === activeTier).title.replace('[', '').replace(']', '')}
-                                </motion.button>
+                                {activeTier === 'aroused' && (
+                                    <div className="mt-4 flex justify-center w-full">
+                                        <div className="w-full max-w-md">
+                                            <givebutter-widget id="jbNa0j"></givebutter-widget>
+                                        </div>
+                                    </div>
+                                )}
+                                {activeTier === 'scholars' && (
+                                    <div className="mt-4 flex justify-center w-full">
+                                        <div className="w-full max-w-md">
+                                            <givebutter-widget id="j1oqog"></givebutter-widget>
+                                        </div>
+                                    </div>
+                                )}
+                                {activeTier === 'extra' && (
+                                    <div className="mt-4 flex justify-center w-full">
+                                        <div className="w-full max-w-md">
+                                            <givebutter-widget id="LY6yKg"></givebutter-widget>
+                                        </div>
+                                    </div>
+                                )}
+                                {activeTier === 'programming' && (
+                                    <div className="mt-4 flex justify-center w-full">
+                                        <div className="w-full max-w-md">
+                                            <givebutter-widget id="L4QOWg"></givebutter-widget>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
 
                         </motion.div>
@@ -247,7 +239,7 @@ const DonationCreative = () => {
                                 onClick={() => setActiveTier(tier.id)}
                                 className="w-full text-left mb-4"
                             >
-                                <h3 className={`text-2xl font-oswald font-bold uppercase tracking-wider transition-colors duration-300 ${activeTier === tier.id ? 'text-white' : 'text-gray-500'}`}>
+                                <h3 className={`text-2xl font-oswald font-bold uppercase tracking-wider mb-2 transition-colors duration-300 ${activeTier === tier.id ? 'text-white' : 'text-gray-500'}`}>
                                     {tier.title}
                                 </h3>
                                 <p className={`text-sm font-roboto transition-colors duration-300 ${activeTier === tier.id ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -270,25 +262,35 @@ const DonationCreative = () => {
                                                 {content[tier.id].intro}
                                             </p>
 
-                                            <div className="space-y-4">
-                                                {content[tier.id].items.map((item, idx) => (
-                                                    <div key={idx} className="bg-white/5 border border-white/10 p-4 rounded-sm">
-                                                        <div className="flex justify-between items-baseline mb-1">
-                                                            <h4 className="text-sm font-oswald font-bold text-white">{item.title}</h4>
-                                                            <span className="text-sm font-bold text-white/80">{item.price}</span>
-                                                        </div>
-                                                        <p className="text-xs text-gray-400 font-roboto">{item.desc}</p>
-                                                    </div>
-                                                ))}
-                                            </div>
-
                                             <div className="mt-8">
-                                                <button 
-                                                    onClick={() => window.open('https://givebutter.com/41st', '_blank')}
-                                                    className="w-full py-3 bg-white text-black font-oswald font-bold uppercase tracking-widest text-sm hover:bg-gray-200 transition-colors"
-                                                >
-                                                    Donate Now
-                                                </button>
+                                {activeTier === 'aroused' && (
+                                    <div className="mt-4 flex justify-center w-full">
+                                        <div className="w-full max-w-md">
+                                            <givebutter-widget id="jbNa0j"></givebutter-widget>
+                                        </div>
+                                    </div>
+                                )}
+                                {activeTier === 'scholars' && (
+                                    <div className="mt-4 flex justify-center w-full">
+                                        <div className="w-full max-w-md">
+                                            <givebutter-widget id="j1oqog"></givebutter-widget>
+                                        </div>
+                                    </div>
+                                )}
+                                {activeTier === 'extra' && (
+                                    <div className="mt-4 flex justify-center w-full">
+                                        <div className="w-full max-w-md">
+                                            <givebutter-widget id="LY6yKg"></givebutter-widget>
+                                        </div>
+                                    </div>
+                                )}
+                                {activeTier === 'programming' && (
+                                    <div className="mt-4 flex justify-center w-full">
+                                        <div className="w-full max-w-md">
+                                            <givebutter-widget id="L4QOWg"></givebutter-widget>
+                                        </div>
+                                    </div>
+                                )}
                                             </div>
                                         </div>
                                     </motion.div>

@@ -6,9 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/donatenow/',
   build: {
-    emptyOutDir: true,
-    rollupOptions: {
-      input: 'main.html'
-    }
+    emptyOutDir: true
   }
 })

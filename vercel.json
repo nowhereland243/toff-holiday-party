@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/donatenow",
-      "destination": "/donation_now/dist/main.html"
+      "destination": "/donation_now/dist/index.html"
     },
     {
       "source": "/donatenow/(.*)",
