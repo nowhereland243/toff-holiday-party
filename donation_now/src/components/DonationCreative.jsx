@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Experience from '../webgl/Experience';
 import gsap from 'gsap';
 import { motion, AnimatePresence } from 'framer-motion';
+import useUmamiTracking from '../hooks/useUmamiTracking';
 
 const DonationCreative = () => {
     const canvasRef = useRef(null);
@@ -19,6 +20,9 @@ const DonationCreative = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // Initialize Umami custom tracking
+    useUmamiTracking();
 
     useEffect(() => {
         if (canvasRef.current) {
