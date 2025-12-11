@@ -20,6 +20,14 @@
       "destination": "/donation/dist/$1"
     },
     {
+      "source": "/v1",
+      "destination": "/v1/index.html"
+    },
+    {
+      "source": "/v1/:path*",
+      "destination": "/v1/:path*"
+    },
+    {
       "source": "/intro",
       "destination": "/v7/index_v3.html"
     },
