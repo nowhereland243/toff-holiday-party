@@ -103,7 +103,7 @@ const DonationCreative = () => {
                 
                 {/* Back Button */}
                 <button 
-                    onClick={() => window.history.back()}
+                    onClick={() => window.location.href = '/v7/index_v3.html'}
                     className={`fixed top-8 left-8 z-50 flex items-center gap-2 text-white/60 hover:text-white transition-all duration-500 group ${scrolled ? 'bg-black/50 backdrop-blur-md p-3 rounded-full' : ''}`}
                     aria-label="Go back"
                 >
