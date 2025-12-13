@@ -127,7 +127,7 @@ const DonationCreative = () => {
                         Queer community is shaped by the acts and the contributions of its members. Support for Tom of Finland Foundation directly impacts artistry, preservation, and research for generations to come. Your gift ignites the work that keeps our legacy alive.
                     </p>
                     <p className="mt-4 text-gray-400 text-sm reveal-text font-light">
-                        All donations are tax-deductible to the extent allowed by law. Thank you for supporting a Queer 501(c)(3) nonprofit organization.
+                        All donations are tax-deductible to the extent allowed by law. Thank you for supporting a Queer 501(c)(3) nonprofit organization. All donations are treated as unrestricted gifts to the Foundation’s general fund and will be used where they are needed most to support core operations, programs, and the care, preservation, and public presentation of the Foundation’s work.
                     </p>
                 </div>
 
